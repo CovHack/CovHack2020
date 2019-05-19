@@ -10,9 +10,9 @@ export default function IndexPage({ data }) {
   const { frontmatter, html } = markdownRemark
   return (
     <Layout>
-      <Jumbotron className="tagline-container">
+      <Jumbotron className="jumbotron">
         <div className="container">
-          <h1 className="tagline">{frontmatter.tagline}</h1>
+          <h1>{frontmatter.tagline}</h1>
         </div>
       </Jumbotron>
 

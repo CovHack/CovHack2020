@@ -9,6 +9,7 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  color: white;
 }
 
 .site-content {
@@ -19,6 +20,11 @@ body {
 .container {
   /* This can be removed and container will be bootstrap default (larger) */
   max-width: 1000px;
+}
+
+.jumbotron {
+  background: $color-secondary-1;
+  border-radius: 0;
 }
 
 .footer {

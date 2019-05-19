@@ -37,6 +37,7 @@ const Header = class extends React.Component {
             </Link>
 
             <NavbarToggler onClick={this.toggle} />
+
             <Collapse isOpen={this.state.isOpen} navbar>
               <Nav className="ml-auto" navbar>
                 <NavItemLink to="/register">Register</NavItemLink>

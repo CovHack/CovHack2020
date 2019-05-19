@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-// import { Link } from 'gatsby'
+import { Link } from 'gatsby'
+import { Card, CardBody } from 'reactstrap'
 
 import Layout from '../components/Layout'
 
@@ -15,7 +16,19 @@ export default function IndexPage({ data }) {
             <h1 className="tagline">{frontmatter.tagline}</h1>
           </div>
         </div>
+
         <div className="split" />
+
+        <Card className="cta shadow center">
+          <CardBody>
+            <Link to="/register" className="btn btn-lg btn-primary">
+              Get Tickets
+            </Link>
+            <Link to="/hello" className="btn btn-lg btn-outline-primary">
+              Find Out More
+            </Link>
+          </CardBody>
+        </Card>
       </div>
 
       <div className="container">

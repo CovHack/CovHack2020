@@ -15,9 +15,8 @@ export default function IndexPage({ data }) {
             <h1 className="tagline">{frontmatter.tagline}</h1>
           </div>
         </div>
-        <div className="split"></div>
+        <div className="split" />
       </div>
-
 
       <div className="container">
         <div dangerouslySetInnerHTML={{ __html: html }} />

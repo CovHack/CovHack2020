@@ -11,7 +11,7 @@ import { Link } from 'gatsby'
 
 const NavItemLink = props => (
   <NavItem>
-    <Link to={props.to} className="nav-link" activeStyle={{ color: 'rgba(24, 73, 255, 0.7)' }}>
+    <Link to={props.to} className="nav-link">
       {props.children}
     </Link>
   </NavItem>
@@ -36,7 +36,7 @@ const Header = class extends React.Component {
   render() {
     return (
       <div>
-        <Navbar dark expand="md" className="navbar">
+        <Navbar color="light" light expand="md" className="navbar">
           <div className="container">
             <Link to="/" className="navbar-brand">
               CovHack2020

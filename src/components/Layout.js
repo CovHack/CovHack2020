@@ -6,7 +6,8 @@ import useSiteMetadata from './SiteMetadata'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './fonts.css'
-import './all.scss'
+import './theme.scss'
+import './styles.scss'
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()

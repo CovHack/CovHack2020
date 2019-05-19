@@ -1,6 +1,5 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Jumbotron from 'reactstrap/lib/Jumbotron'
 // import { Link } from 'gatsby'
 
 import Layout from '../components/Layout'
@@ -10,11 +9,15 @@ export default function IndexPage({ data }) {
   const { frontmatter, html } = markdownRemark
   return (
     <Layout>
-      <Jumbotron className="jumbotron">
+      <div className="jumbo-outer">
         <div className="container">
-          <h1 className="tagline">{frontmatter.tagline}</h1>
+          <div className="jumbo-inner">
+            <h1 className="tagline">{frontmatter.tagline}</h1>
+          </div>
         </div>
-      </Jumbotron>
+        <div className="split"></div>
+      </div>
+
 
       <div className="container">
         <div dangerouslySetInnerHTML={{ __html: html }} />

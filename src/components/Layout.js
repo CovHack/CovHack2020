@@ -4,7 +4,6 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import useSiteMetadata from './SiteMetadata'
 
-import 'bootstrap/dist/css/bootstrap.min.css'
 import './fonts.css'
 import './theme.scss'
 import './styles.scss'

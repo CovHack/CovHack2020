@@ -4,9 +4,8 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import useSiteMetadata from './SiteMetadata'
 
-import './fonts.css'
-import './theme.scss'
-import './styles.scss'
+import '../scss/theme.scss'
+import '../scss/styles.scss'
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()

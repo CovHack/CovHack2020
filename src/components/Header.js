@@ -30,7 +30,7 @@ const Header = class extends React.Component {
   render() {
     return (
       <div>
-        <Navbar color="light" light expand="md" className="navbar">
+        <Navbar light expand="md" className="navbar">
           <div className="container">
             <Link to="/" className="navbar-brand">
               CovHack2020

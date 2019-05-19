@@ -12,7 +12,7 @@ export default function IndexPage({ data }) {
     <Layout>
       <Jumbotron className="jumbotron">
         <div className="container">
-          <h1>{frontmatter.tagline}</h1>
+          <h1 className="tagline">{frontmatter.tagline}</h1>
         </div>
       </Jumbotron>
 

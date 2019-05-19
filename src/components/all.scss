@@ -1,0 +1,37 @@
+@import './variables';
+
+body {
+  height: 100vh;
+}
+
+.site {
+  background: $background;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.site-content {
+  /* Push footer to the bottom */
+  flex-grow: 1;
+}
+
+.container {
+  /* This can be removed and container will be bootstrap default (larger) */
+  max-width: 1000px;
+}
+
+.footer {
+  background: $background;
+  padding: 4em 0;
+  color: white;
+  border-top: 4px solid $color-primary;
+}
+
+.center {
+  text-align: center;
+}
+
+.navbar {
+  background: $color-primary;
+}

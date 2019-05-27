@@ -33,11 +33,11 @@ body {
 }
 
 .btn-primary, .btn-outline-primary:hover {
-  background: linear-gradient(145deg,$color-primary-b,$color-primary-c) !important;
+  background: linear-gradient(145deg, $color-primary-b, $color-primary-d) !important;
 }
 
 .grad-text {
-  background-image: linear-gradient(145deg,$color-primary-b,$color-primary-c) !important;
+  background-image: linear-gradient(145deg, $color-primary-b, $color-primary-d) !important;
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;

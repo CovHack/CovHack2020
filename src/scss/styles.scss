@@ -25,10 +25,15 @@ body {
 }
 
 .footer {
-  background: $background;
+  // background: $background;
+  background: linear-gradient(145deg, $color-primary-c, $color-primary-e) !important;
   padding: 4em 0;
   color: white;
-  border-top: 4px solid $color-primary;
+  // border-top: 4px solid $color-primary;
+}
+
+.btn-primary, .btn-outline-primary:hover {
+  background: linear-gradient(145deg,$color-primary-b,$color-primary-c) !important;
 }
 
 .center {
@@ -43,8 +48,11 @@ body {
   clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 100%);
 }
 
-.navbar-brand {
-  color: $color-primary !important;
+.grad-text {
+  background-image: linear-gradient(145deg,$color-primary-b,$color-primary-c) !important;
+  color:transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
 .jumbo-outer {

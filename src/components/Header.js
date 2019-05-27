@@ -33,7 +33,7 @@ const Header = class extends React.Component {
         <Navbar light expand="md" className="navbar">
           <div className="container">
             <Link to="/" className="navbar-brand">
-              CovHack2020
+              <div className="grad-text">CovHack2020</div>
             </Link>
 
             <NavbarToggler onClick={this.toggle} />

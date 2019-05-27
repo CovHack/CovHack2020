@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'CovHack2020',
-    description: `Coventry University Hackathon Society's Second Annual Hackathon`
+    description: `CovHackSoc's Second Annual Hackathon`
   },
   plugins: [
     'gatsby-plugin-netlify-cms',

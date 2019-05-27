@@ -34,7 +34,7 @@ export default function IndexPage({ data }) {
       </div>
 
       <div className="container">
-        <div dangerouslySetInnerHTML={{ __html: html }} />
+        <div className="markdown-content" dangerouslySetInnerHTML={{ __html: html }} />
       </div>
     </Layout>
   )

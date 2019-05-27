@@ -3,7 +3,7 @@ import Layout from '../components/Layout'
 
 const NotFoundPage = () => (
   <Layout>
-    <div className="container">
+    <div className="container" style={{ margin: '2em 0' }}>
       <h1>
         404{' '}
         <span role="img" aria-label="404 face">

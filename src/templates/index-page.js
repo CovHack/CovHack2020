@@ -25,7 +25,7 @@ export default function IndexPage({ data }) {
               <Link to="/register" className="btn btn-lg btn-primary">
                 Get Tickets
               </Link>
-              <Link to="/hello" className="btn btn-lg btn-outline-primary">
+              <Link to="/hello" className="btn btn-lg btn-outline-primary grad-text">
                 Find Out More
               </Link>
             </CardBody>

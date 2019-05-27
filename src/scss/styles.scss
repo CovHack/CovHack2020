@@ -36,6 +36,13 @@ body {
   background: linear-gradient(145deg,$color-primary-b,$color-primary-c) !important;
 }
 
+.grad-text {
+  background-image: linear-gradient(145deg,$color-primary-b,$color-primary-c) !important;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
 .center {
   text-align: center;
 }
@@ -46,13 +53,6 @@ body {
   background: white;
   border: none;
   clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 100%);
-}
-
-.grad-text {
-  background-image: linear-gradient(145deg,$color-primary-b,$color-primary-c) !important;
-  color:transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
 }
 
 .jumbo-outer {

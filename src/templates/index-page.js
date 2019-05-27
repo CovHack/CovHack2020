@@ -19,16 +19,18 @@ export default function IndexPage({ data }) {
 
         <div className="split" />
 
-        <Card className="cta shadow center">
-          <CardBody>
-            <Link to="/register" className="btn btn-lg btn-primary">
-              Get Tickets
-            </Link>
-            <Link to="/hello" className="btn btn-lg btn-outline-primary">
-              Find Out More
-            </Link>
-          </CardBody>
-        </Card>
+        <div className="cta-container">
+          <Card className="cta shadow center">
+            <CardBody>
+              <Link to="/register" className="btn btn-lg btn-primary">
+                Get Tickets
+              </Link>
+              <Link to="/hello" className="btn btn-lg btn-outline-primary">
+                Find Out More
+              </Link>
+            </CardBody>
+          </Card>
+        </div>
       </div>
 
       <div className="container">

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Helmet from 'react-helmet'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
@@ -10,12 +10,15 @@ import 'aos/dist/aos.css'
 import '../scss/theme.scss'
 import '../scss/styles.scss'
 
-AOS.init({
-  duration: 1000,
-})
-
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+    })    
+  })
+
   return (
     <div>
       <Helmet>

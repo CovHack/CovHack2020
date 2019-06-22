@@ -1,0 +1,8 @@
+.btn {
+  margin: 8px;
+}
+
+.btn-primary,
+.btn-outline-primary:hover {
+  background: linear-gradient(145deg, $color-primary-b, $color-primary-d) !important;
+}

@@ -5,7 +5,6 @@ import React from 'react'
 
 const Footer = () => (
   <div className="footer">
-    <div className="footer-split"></div>
     <div className="footer-inner">
       <div className="container">
         <div className="copyright">© 2019 Coventry University Hackathon Society</div>

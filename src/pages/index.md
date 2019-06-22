@@ -2,7 +2,7 @@
 path: "/"
 templateKey: index-page
 title: CovHack2020
-tagline: CovHackSoc's Second Annual Hackathon!
+tagline: CovHackSoc's Second Annual 24hr Hackathon!
 ---
 ## Welcome to CovHack2020!
 

@@ -13,6 +13,7 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "bootstrap": "^4.3.1",
     "gatsby": "^2.3.16",
     "gatsby-plugin-netlify-cms": "^3.0.17",
@@ -25,7 +26,8 @@
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.0",
     "react-icons": "^3.7.0",
-    "reactstrap": "^8.0.0"
+    "reactstrap": "^8.0.0",
+    "styled-components": "^4.3.2"
   },
   "devDependencies": {
     "husky": "^2.3.0",

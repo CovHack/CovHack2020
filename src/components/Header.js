@@ -1,5 +1,5 @@
 import React from 'react'
-import { Collapse, Navbar, NavbarToggler, Nav, NavItem } from 'reactstrap'
+import { Collapse, Navbar, NavbarToggler, Nav, NavItem, Container } from 'reactstrap'
 
 import { Link } from 'gatsby'
 
@@ -12,6 +12,10 @@ const NavItemLink = props => (
 )
 
 const Header = class extends React.Component {
+  state = {
+    class: 'header',
+  }
+
   constructor(props) {
     super(props)
 
@@ -27,26 +31,33 @@ const Header = class extends React.Component {
     })
   }
 
+  expand = () => {
+    this.setState({ class: `header ${window.scrollY > 60 ? 'shadow-sm' : 'header-expand'}` })
+  }
+
+  componentDidMount() {
+    this.expand()
+    window.addEventListener('scroll', this.expand)
+  }
+
   render() {
     return (
-      <div>
-        <Navbar light expand="md" className="navbar">
-          <div className="container">
-            <Link to="/" className="navbar-brand">
-              <div className="grad-text">CovHack2020</div>
-            </Link>
+      <Navbar light expand="md" className={`navbar navbar-light fixed-top ${this.state.class}`}>
+        <Container>
+          <Link to="/" className="navbar-brand">
+            <div className="grad-text">CovHack2020</div>
+          </Link>
 
-            <NavbarToggler onClick={this.toggle} />
+          <NavbarToggler onClick={this.toggle} />
 
-            <Collapse isOpen={this.state.isOpen} navbar>
-              <Nav className="ml-auto" navbar>
+          <Collapse isOpen={this.state.isOpen} navbar>
+            <Nav className="ml-auto header-navbar" navbar>
               <NavItemLink to="/">Home</NavItemLink>
               <NavItemLink to="/register">Register</NavItemLink>
-              </Nav>
-            </Collapse>
-          </div>
-        </Navbar>
-      </div>
+            </Nav>
+          </Collapse>
+        </Container>
+      </Navbar>
     )
   }
 }

@@ -13,7 +13,7 @@ const NavItemLink = props => (
 
 const Header = class extends React.Component {
   state = {
-    class: 'header',
+    expand: true,
   }
 
   constructor(props) {
@@ -32,7 +32,7 @@ const Header = class extends React.Component {
   }
 
   expand = () => {
-    this.setState({ class: `header ${window.scrollY > 60 ? 'shadow-sm' : 'header-expand'}` })
+    this.setState({ expand: window.scrollY < 60 })
   }
 
   componentDidMount() {
@@ -42,10 +42,10 @@ const Header = class extends React.Component {
 
   render() {
     return (
-      <Navbar light expand="md" className={`navbar navbar-light fixed-top ${this.state.class}`}>
+      <Navbar light expand="md" className={`navbar navbar-light fixed-top header ${this.state.expand ? 'header-expand' : 'shadow-sm'}`}>
         <Container>
           <Link to="/" className="navbar-brand">
-            <div className="grad-text">CovHack2020</div>
+            <div className={this.state.expand ? 'brand-bg' : 'grad-text'}>CovHack2020</div>
           </Link>
 
           <NavbarToggler onClick={this.toggle} />

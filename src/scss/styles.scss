@@ -106,3 +106,15 @@ body {
   border-radius: 6px;
   padding: 0 0.6em;
 }
+
+.header-expand.navbar-brand {
+  font-size: 2em;
+  color: white;
+}
+
+.brand-bg {
+  background: linear-gradient(145deg, $color-primary-c, $color-primary-e) !important;
+  color: white;
+  padding: 0.4em 1em;
+  border-radius: 10px;
+}

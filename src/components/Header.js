@@ -1,6 +1,5 @@
 import React from 'react'
 import { Collapse, Navbar, NavbarToggler, Nav, NavItem, Container } from 'reactstrap'
-
 import { Link } from 'gatsby'
 
 const NavItemLink = props => (
@@ -25,11 +24,7 @@ const Header = class extends React.Component {
     }
   }
 
-  toggle() {
-    this.setState({
-      isOpen: !this.state.isOpen,
-    })
-  }
+  toggle = () => this.setState({ isOpen: !this.state.isOpen })
 
   expand = () => {
     this.setState({ expand: window.scrollY < 60 })
@@ -42,7 +37,13 @@ const Header = class extends React.Component {
 
   render() {
     return (
-      <Navbar light expand="md" className={`navbar navbar-light fixed-top header ${this.state.expand ? 'header-expand' : 'shadow-sm'}`}>
+      <Navbar
+        light
+        expand="md"
+        className={`navbar navbar-light fixed-top header ${
+          this.state.expand ? 'header-expand' : 'shadow-sm'
+        }`}
+      >
         <Container>
           <Link to="/" className="navbar-brand">
             <div className={this.state.expand ? 'brand-bg' : 'grad-text'}>CovHack2020</div>

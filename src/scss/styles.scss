@@ -30,8 +30,8 @@ body {
   padding: 0;
   background: linear-gradient(145deg, $color-primary-c, $color-primary-e) !important;
   margin-top: 1em;
-  clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 30%);
-  padding-top: 4em;
+  // clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 30%);
+  // padding-top: 4em;
 }
 
 .footer-inner {
@@ -86,30 +86,8 @@ body {
   margin: 5em 0;
 }
 
-.header {
-  transition: 0.14s ease all;
-  background: rgba(255, 255, 255, 1);
-}
-
-.header-expand {
-  padding-top: 3em;
-  padding-bottom: 3em;
-  background: rgba(255, 255, 255, 0);
-}
-
 .jumbotron-padding {
   padding-top: 8em;
-}
-
-.header-navbar {
-  background: rgba(255, 255, 255, 0.6);
-  border-radius: 6px;
-  padding: 0 0.6em;
-}
-
-.header-expand.navbar-brand {
-  font-size: 2em;
-  color: white;
 }
 
 .brand-bg {

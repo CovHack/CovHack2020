@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import Helmet from 'react-helmet'
 import Header from '../components/Header'
 import Footer from '../components/Footer'

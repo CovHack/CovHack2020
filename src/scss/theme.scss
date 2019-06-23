@@ -1,8 +1,6 @@
 @import './colors.scss';
 @import './fonts.scss';
 
-@import './buttons.scss';
-
 $theme-colors: (
   primary: $color-primary,
   secondary: $color-secondary-1,
@@ -31,3 +29,8 @@ $link-decoration: none !default;
 $link-hover-decoration: none !default;
 
 @import 'node_modules/bootstrap/scss/bootstrap.scss';
+
+// Custom styles
+// (loaded agfter bootstrap to override values without `!important`)
+@import './buttons.scss';
+@import './header.scss';

@@ -12,7 +12,11 @@ export default function DiagonalSplit(props) {
       viewBox="0 0 1 1"
       preserveAspectRatio="none"
     >
-      <polygon points="1,0 0,1 1,1" fill={props.color || 'white'} />
+      {!props.invert ? (
+        <polygon points="1, 0 0, 1 1, 1" fill={props.color || 'white'} />
+      ) : (
+        <polygon points="0, 1 1, 0 0, 0" fill={props.color || 'white'} />
+      )}
     </svg>
   )
 }

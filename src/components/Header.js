@@ -42,8 +42,7 @@ const Header = class extends React.Component {
         expand="md"
         className={`navbar navbar-light fixed-top header ${
           this.state.expand ? 'header-expand' : 'shadow-sm'
-        }`}
-      >
+        }`}>
         <Container>
           <Link to="/" className="navbar-brand">
             <div className={this.state.expand ? 'brand-bg' : 'grad-text'}>CovHack2020</div>

@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'CovHack2020',
-    description: `CovHackSoc's Second Annual Hackathon`
+    description: `CovHackSoc's Second Annual Hackathon`,
   },
   plugins: [
     'gatsby-plugin-netlify-cms',
@@ -10,9 +10,9 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/pages`,
-        name: 'pages'
-      }
+        name: 'pages',
+      },
     },
-    'gatsby-transformer-remark'
-  ]
+    'gatsby-transformer-remark',
+  ],
 }

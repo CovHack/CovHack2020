@@ -15,7 +15,7 @@ export default function IndexPage({ data }) {
       <div className="jumbo-outer">
         <Container className="jumbotron-padding">
           <div className="jumbo-inner">
-            <h1 className="tagline" data-aos="fade">
+            <h1 className="tagline">
               {frontmatter.tagline}
             </h1>
           </div>
@@ -25,15 +25,17 @@ export default function IndexPage({ data }) {
       </div>
 
       <div className="cta-container">
-        <Card className="cta shadow center" data-aos="zoom-in">
+        <Card className="cta shadow center">
           <CardBody>
             <Link to="/register" className="btn btn-lg btn-primary">
               Get Tickets
             </Link>
-            <Link to="/hello" className="btn btn-lg btn-outline-primary grad-text">
-              Find Out More
+
+            <Link to="#findoutmore" className="btn btn-lg btn-outline-primary grad-text">
+              Find Out More ⭣
             </Link>
           </CardBody>
+          <span id="findoutmore" />
         </Card>
       </div>
 

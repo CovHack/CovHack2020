@@ -6,6 +6,10 @@ body {
   width: 100%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .site {
   display: flex;
   height: 100%;

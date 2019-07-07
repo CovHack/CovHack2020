@@ -1,10 +1,10 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import { Link } from 'gatsby'
-import { Card, CardBody } from 'reactstrap'
+import { Card, CardBody, Container } from 'reactstrap'
 
 import DiagonalSplit from '../components/DiagonalSplit'
-
+import Sponsors from '../components/Sponsors'
 import Layout from '../components/Layout'
 
 export default function IndexPage({ data }) {
@@ -13,13 +13,13 @@ export default function IndexPage({ data }) {
   return (
     <Layout>
       <div className="jumbo-outer">
-        <div className="container jumbotron-padding">
+        <Container className="jumbotron-padding">
           <div className="jumbo-inner">
             <h1 className="tagline" data-aos="fade">
               {frontmatter.tagline}
             </h1>
           </div>
-        </div>
+        </Container>
 
         <DiagonalSplit />
       </div>
@@ -37,13 +37,15 @@ export default function IndexPage({ data }) {
         </Card>
       </div>
 
-      <div className="container">
+      <Container className="mb-10">
         <div
           data-aos="fade-up"
           className="markdown-content"
           dangerouslySetInnerHTML={{ __html: html }}
         />
-      </div>
+      </Container>
+
+      <Sponsors className="mb-10" />
     </Layout>
   )
 }

@@ -13,7 +13,9 @@ import '../scss/styles.scss'
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()
 
-  useEffect(() => AOS.init({ duration: 1000 }))
+  useEffect(() => {
+    AOS.init({ duration: 1000 })
+  }, [])
 
   return (
     <div>

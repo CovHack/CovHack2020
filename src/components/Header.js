@@ -4,9 +4,13 @@ import { Link } from 'gatsby'
 
 const NavItemLink = props => (
   <NavItem>
-    <Link to={props.to} className="nav-link">
-      {props.children}
-    </Link>
+    {!props.external ? (
+      <Link to={props.to} className="nav-link">
+        {props.children}
+      </Link>
+    ) : (
+      <a href={props.to} className="nav-link">{props.children}</a>
+    )}
   </NavItem>
 )
 
@@ -54,6 +58,7 @@ const Header = class extends React.Component {
             <Nav className="ml-auto header-navbar" navbar>
               <NavItemLink to="/">Home</NavItemLink>
               <NavItemLink to="/register">Register</NavItemLink>
+              <NavItemLink to="http://2019.covhack.org" external>2019</NavItemLink>
             </Nav>
           </Collapse>
         </Container>

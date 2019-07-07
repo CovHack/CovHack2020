@@ -6,22 +6,22 @@ import DiagonalSplit from '../components/DiagonalSplit'
 // TODO: Replace with sponsors from CMS
 const tempSponsors = [
   {
-    tier: 'Platinum',
+    tierName: 'Platinum',
     color: '#CCC2C2',
     // sponsors: [{ name: 'Company name', logo: 'image source' }],
   },
   {
-    tier: 'Gold',
+    tierName: 'Gold',
     color: '#C98910',
     sponsors: [],
   },
   {
-    tier: 'Silver',
+    tierName: 'Silver',
     color: '#A8A8A8',
     sponsors: [],
   },
   {
-    tier: 'Bronze',
+    tierName: 'Bronze',
     color: '#965A38',
     sponsors: [],
   },
@@ -38,9 +38,9 @@ export default class Sponsors extends Component {
           <h1 style={{ textAlign: 'center' }}>Sponsors</h1>
 
           {tempSponsors.map(tier => (
-            <div>
+            <div key={tier.tierName}>
               <h2 className="mt-5" style={{ color: tier.color, textAlign: 'center' }}>
-                {tier.tier.toUpperCase()}
+                {tier.tierName.toUpperCase()}
               </h2>
 
               <Row className="justify-content-md-center">
@@ -55,7 +55,7 @@ export default class Sponsors extends Component {
                 ) : (
                   <Col>
                     <p className="mt-4 mb-4" style={{ textAlign: 'center', opacity: 0.6 }}>
-                      coming soon ✨
+                      coming soon <span aria-label="sparkles" role="img">✨</span>
                     </p>
                   </Col>
                 )}

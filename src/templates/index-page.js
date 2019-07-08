@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { Link } from 'gatsby'
 import { Card, CardBody, Container } from 'reactstrap'
+import { MdKeyboardArrowDown } from 'react-icons/md'
 
 import DiagonalSplit from '../components/DiagonalSplit'
 import Sponsors from '../components/Sponsors'
@@ -15,9 +16,7 @@ export default function IndexPage({ data }) {
       <div className="jumbo-outer">
         <Container className="jumbotron-padding">
           <div className="jumbo-inner">
-            <h1 className="tagline">
-              {frontmatter.tagline}
-            </h1>
+            <h1 className="tagline">{frontmatter.tagline}</h1>
           </div>
         </Container>
 
@@ -32,7 +31,7 @@ export default function IndexPage({ data }) {
             </Link>
 
             <Link to="#findoutmore" className="btn btn-lg btn-outline-primary grad-text">
-              Find Out More ⭣
+              Find Out More <MdKeyboardArrowDown className="brand-color" />
             </Link>
           </CardBody>
           <span id="findoutmore" />

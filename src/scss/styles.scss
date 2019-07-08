@@ -12,7 +12,7 @@ html {
 
 .site {
   display: flex;
-  height: 100%;
+  min-height: 100vh;
   flex-direction: column;
 }
 
@@ -99,4 +99,11 @@ html {
   color: white;
   padding: 0.4em 1em;
   border-radius: 10px;
+}
+
+.btn-outline-primary > svg {
+  color: $color-primary;
+}
+.btn-outline-primary:hover > svg {
+  color: white;
 }

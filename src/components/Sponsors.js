@@ -27,6 +27,15 @@ const tempSponsors = [
   },
 ]
 
+const ComingSoon = () => (
+  <p className="mt-4 mb-4" style={{ textAlign: 'center', opacity: 0.6 }}>
+    coming soon{' '}
+    <span aria-label="sparkles" role="img">
+      ✨
+    </span>
+  </p>
+)
+
 export default class Sponsors extends Component {
   render() {
     return (
@@ -54,9 +63,7 @@ export default class Sponsors extends Component {
                   ))
                 ) : (
                   <Col>
-                    <p className="mt-4 mb-4" style={{ textAlign: 'center', opacity: 0.6 }}>
-                      coming soon <span aria-label="sparkles" role="img">✨</span>
-                    </p>
+                    <ComingSoon />
                   </Col>
                 )}
               </Row>

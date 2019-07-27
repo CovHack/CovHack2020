@@ -1,19 +1,24 @@
 import React from 'react'
-// import { } from 'reactstrap'
+import { Container, Row, Col } from 'reactstrap'
 
 // import { Link } from 'gatsby'
 
-import DiagonalSplit from './DiagonalSplit'
+import { DiagonalSplit } from '.'
 
-const Footer = () => (
+export const Footer = () => (
   <div className="footer">
     <DiagonalSplit invert />
     <div className="footer-inner">
-      <div className="container">
-        <div className="copyright">© 2019 Coventry University Hackathon Society</div>
-      </div>
+      <Container>
+        <Row>
+          <Col>
+            <div style={{whiteSpace: 'nowrap'}}>© 2019 Coventry University Hackathon Society</div>
+          </Col>
+          <Col>
+            <div>hello@covhack.org</div>
+          </Col>
+        </Row>
+      </Container>
     </div>
   </div>
 )
-
-export default Footer

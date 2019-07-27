@@ -4,9 +4,7 @@ import { Link } from 'gatsby'
 import { Card, CardBody, Container } from 'reactstrap'
 import { MdKeyboardArrowDown } from 'react-icons/md'
 
-import DiagonalSplit from '../components/DiagonalSplit'
-import Sponsors from '../components/Sponsors'
-import Layout from '../components/Layout'
+import { DiagonalSplit, Map, Sponsors, Layout } from '../components'
 
 export default function IndexPage({ data }) {
   const { markdownRemark } = data
@@ -45,6 +43,8 @@ export default function IndexPage({ data }) {
           dangerouslySetInnerHTML={{ __html: html }}
         />
       </Container>
+
+      <Map />
 
       <Sponsors className="mb-10" />
     </Layout>

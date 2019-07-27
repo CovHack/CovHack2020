@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function DiagonalSplit(props) {
+export const DiagonalSplit = props => {
   const color = props.color || 'white'
   const polygonPoints = !props.invert ? '1, 0 0, 1 1, 1' : '0, 1 1, 0 0, 0'
 

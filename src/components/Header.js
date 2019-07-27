@@ -9,12 +9,14 @@ const NavItemLink = props => (
         {props.children}
       </Link>
     ) : (
-      <a href={props.to} className="nav-link">{props.children}</a>
+      <a href={props.to} className="nav-link">
+        {props.children}
+      </a>
     )}
   </NavItem>
 )
 
-const Header = class extends React.Component {
+export const Header = class extends React.Component {
   state = {
     expand: true,
   }
@@ -30,9 +32,7 @@ const Header = class extends React.Component {
 
   toggle = () => this.setState({ isOpen: !this.state.isOpen })
 
-  expand = () => {
-    this.setState({ expand: window.scrollY < 60 })
-  }
+  expand = () => this.setState({ expand: window.scrollY < 60 })
 
   componentDidMount() {
     this.expand()
@@ -58,7 +58,9 @@ const Header = class extends React.Component {
             <Nav className="ml-auto header-navbar" navbar>
               <NavItemLink to="/">Home</NavItemLink>
               <NavItemLink to="/register">Register</NavItemLink>
-              <NavItemLink to="http://2019.covhack.org" external>2019</NavItemLink>
+              <NavItemLink to="http://2019.covhack.org" external>
+                2019
+              </NavItemLink>
             </Nav>
           </Collapse>
         </Container>
@@ -66,5 +68,3 @@ const Header = class extends React.Component {
     )
   }
 }
-
-export default Header

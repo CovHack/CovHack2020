@@ -88,6 +88,7 @@ html {
 
 .markdown-content {
   margin: 5em 0;
+  line-height: 2;
 }
 
 .jumbotron-padding {
@@ -106,4 +107,18 @@ html {
 }
 .btn-outline-primary:hover > svg {
   color: white;
+}
+
+.map-responsive {
+  overflow: hidden;
+  padding-bottom: 380px;
+  position: relative;
+  height: 0;
+}
+.map-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }

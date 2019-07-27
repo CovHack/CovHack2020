@@ -1,30 +1,30 @@
 import React, { Component } from 'react'
 import { Jumbotron, Container, Card, Row, Col } from 'reactstrap'
 
-import DiagonalSplit from '../components/DiagonalSplit'
+import { DiagonalSplit } from '../components'
 
 // TODO: Replace with sponsors from CMS
 const tempSponsors = [
-  {
-    tierName: 'Platinum',
-    color: '#CCC2C2',
-    // sponsors: [{ name: 'Company name', logo: 'image source' }],
-  },
-  {
-    tierName: 'Gold',
-    color: '#C98910',
-    sponsors: [],
-  },
-  {
-    tierName: 'Silver',
-    color: '#A8A8A8',
-    sponsors: [],
-  },
-  {
-    tierName: 'Bronze',
-    color: '#965A38',
-    sponsors: [],
-  },
+  // {
+  //   tierName: 'Platinum',
+  //   color: '#CCC2C2',
+  //   // sponsors: [{ name: 'Company name', logo: 'image source', link: 'url' }],
+  // },
+  // {
+  //   tierName: 'Gold',
+  //   color: '#C98910',
+  //   sponsors: [],
+  // },
+  // {
+  //   tierName: 'Silver',
+  //   color: '#A8A8A8',
+  //   sponsors: [],
+  // },
+  // {
+  //   tierName: 'Bronze',
+  //   color: '#965A38',
+  //   sponsors: [],
+  // },
 ]
 
 const ComingSoon = () => (
@@ -36,7 +36,7 @@ const ComingSoon = () => (
   </p>
 )
 
-export default class Sponsors extends Component {
+export class Sponsors extends Component {
   render() {
     return (
       <Jumbotron style={{ padding: 0 }}>
@@ -46,9 +46,18 @@ export default class Sponsors extends Component {
           style={{ paddingTop: '4em', paddingBottom: '2em' }}>
           <h1 style={{ textAlign: 'center' }}>Sponsors</h1>
 
+          <ComingSoon />
+
+          <p className="center mt-4 mb-4">
+            Interested in sponsoring? <a href="mailto:hello@covhack.org">Email us</a>!
+          </p>
+
           {tempSponsors.map(tier => (
             <div key={tier.tierName}>
-              <h2 className="mt-5" style={{ color: tier.color, textAlign: 'center' }}>
+              <h2
+                className="mt-5"
+                style={{ color: tier.color, textAlign: 'center' }}
+                data-aos="fade-right">
                 {tier.tierName.toUpperCase()}
               </h2>
 
@@ -56,7 +65,7 @@ export default class Sponsors extends Component {
                 {tier.sponsors && tier.sponsors.length ? (
                   tier.sponsors.map(sponsor => (
                     <Col xs="6" sm="4">
-                      <Card>
+                      <Card data-aos="fade-right">
                         <h3>{sponsor.name}</h3>
                       </Card>
                     </Col>

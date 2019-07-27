@@ -75,6 +75,7 @@ export const pageQuery = graphql`
           html
           frontmatter {
             title
+            listOrder
           }
         }
       }

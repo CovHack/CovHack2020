@@ -22,10 +22,12 @@ exports.createPages = ({ actions, graphql }) => {
     }
 
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+      if (!node.frontmatter.path) return
+
       createPage({
         path: node.frontmatter.path,
         component: path.resolve(`src/templates/${node.frontmatter.templateKey}.js`),
-        context: {}, // additional data can be passed via context
+        context: {},
       })
     })
   })

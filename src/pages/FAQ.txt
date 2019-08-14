@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>FAQs</title>
+  <style>
+      h1 {
+          color:#00aeef;
+      }
+  </style>
+</head>
+<body>
+  <h1>Frequently Asked Questions</h1>
+How do I attend?</br>
+Simply buy a ticket [here] and turn up on the day!</br>
+Is it free? </br>
+Yep! Tickets are free.</br>
+What about food?</br>
+We provide you with lunch and dinner/tea on Saturday, and breakfast and lunch on Sunday.</br>
+What level of knowledge is required?</br>
+None! Just come with a thirst for knowledge, and we can help you out with the rest.</br>
+What kind of person can go?</br>
+If you’re a university student or have graduated within the past year, you’re more than welcome to attend! If you’re under 18, we’re sorry but you can’t currently attend due to strict Minor laws.</br>
+What do I bring? What can’t I bring?</br>
+Definitely bring your laptop and any hardware you require for your project.	We also recommend bringing a blanket for sleeping. Please be aware that no alcohol is allowed on site.</br>
+How many people per team?</br>
+	Maximum team size is 4 people.</br>
+What if I turn up alone?</br>
+	You can either work alone, or we can place you in a team with others.</br>
+Can I sleep?</br>
+Yes! We encourage you to sleep during the event. We will be providing a quiet room for people to sleep in.</br>
+Can I smoke?</br>
+	Yep! We have a smoking area near the building.</br>
+Who owns the projects?</br>
+You do! It’s your work! However, we may display it on our website as an example for next year’s attendees.</br>
+Is the building wheelchair accessible?</br>
+We have lifts round the EEC to make sure people of all physical abilities can attend CovHack! If you need any extra assistance, don’t hesitate to ask any of our organisers or volunteers for help.
+
+</body>
+</html>
+
+

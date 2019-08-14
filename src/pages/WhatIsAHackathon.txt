@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>What is a hackathon?</title>
+  <style>
+      h1 {
+          color:#00aeef;
+      }
+  </style>
+</head>
+<body>
+<h1>What is a hackathon?</h1> </br>
+A hackathon is a 24-hour event where teams and individuals create a project from scratch within the given time frame. Software programmers, developers, designers, and anyone with a passion for creating things come together to produce fun, interesting, and sometimes downright silly projects. </br>
+</br>
+What kind of project can I work on?</br>
+You can work on anything you want to! As long as your project does not break the MLH Code of Conduct (which can be found <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">here</a>), you can make it!</br>
+</br>
+Why should I attend?</br>
+<ol>
+  <li>Free food</li>
+  <li>Free swag</li>
+  <li>Meet new people</li>
+  <li>Learn cool things</li>
+  <li>Make cool things!</li>
+</ol>
+
+So...what are you waiting for?
+
+</body>
+</html>
+

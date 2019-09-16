@@ -1,7 +1,7 @@
 {
-  "name": "allenp.co.uk",
+  "name": "covhack2020",
   "private": true,
-  "description": "Paul Allen Website",
+  "description": "covhack.org 2020 site",
   "version": "0.1.0",
   "license": "ISC",
   "scripts": {
@@ -35,6 +35,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jmsv/allenp.co.uk"
+    "url": "https://github.com/CovHack/CovHack2020"
   }
 }

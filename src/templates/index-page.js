@@ -39,10 +39,7 @@ export default function IndexPage({ data }) {
       </div>
 
       <Container style={{ marginTop: '5em', marginBottom: '5em' }}>
-        <div
-          className="markdown-content"
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
+        <div className="markdown-content" dangerouslySetInnerHTML={{ __html: html }} />
 
         <HowToFindUs howToFindUs={howToFindUs} style={{ marginBottom: '2em' }} />
 

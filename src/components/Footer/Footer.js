@@ -14,7 +14,7 @@ export const Footer = () => (
       <Container>
         <Row>
           <Col>
-            <div style={{whiteSpace: 'nowrap'}}>© 2019 Coventry University Hackathon Society</div>
+            <div style={{ whiteSpace: 'nowrap' }}>© 2019 Coventry University Hackathon Society</div>
           </Col>
           <Col>
             <div>hello@covhack.org</div>

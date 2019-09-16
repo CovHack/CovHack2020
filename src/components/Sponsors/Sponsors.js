@@ -54,9 +54,7 @@ export class Sponsors extends Component {
 
           {tempSponsors.map(tier => (
             <div key={tier.tierName}>
-              <h2
-                className="mt-5"
-                style={{ color: tier.color, textAlign: 'center' }}>
+              <h2 className="mt-5" style={{ color: tier.color, textAlign: 'center' }}>
                 {tier.tierName.toUpperCase()}
               </h2>
 

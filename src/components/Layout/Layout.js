@@ -24,7 +24,12 @@ export const Layout = ({ children }) => {
         <meta property="og:url" content="/" />
         <meta property="og:image" content="/img/og-image.jpg" />
 
-        <link rel="stylesheet" href="https://indestructibletype.com/fonts/Jost.css" type="text/css" charset="utf-8" />
+        <link
+          rel="stylesheet"
+          href="https://indestructibletype.com/fonts/Jost.css"
+          type="text/css"
+          charset="utf-8"
+        />
       </Helmet>
 
       <div className="site">

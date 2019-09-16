@@ -2,6 +2,8 @@ import React from 'react'
 import { Collapse, Navbar, NavbarToggler, Nav, NavItem, Container } from 'reactstrap'
 import { Link } from 'gatsby'
 
+import './Header.scss'
+
 const NavItemLink = props => (
   <NavItem>
     {!props.external ? (
@@ -44,12 +46,13 @@ export const Header = class extends React.Component {
       <Navbar
         light
         expand="md"
-        className={`navbar navbar-light fixed-top header ${
+        className={`navbar navbar-dark fixed-top header ${
           this.state.expand ? 'header-expand' : 'shadow-sm'
         }`}>
         <Container>
           <Link to="/" className="navbar-brand">
-            <div className={this.state.expand ? 'brand-bg' : 'grad-text'}>CovHack2020</div>
+            <img src="covhack-logo-white.png" alt="CovHack Logo" height={28} />
+            <div className={this.state.expand ? 'brand-bg' : ''}>CovHack</div>
           </Link>
 
           <NavbarToggler onClick={this.toggle} />

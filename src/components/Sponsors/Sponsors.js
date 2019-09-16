@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Jumbotron, Container, Card, Row, Col } from 'reactstrap'
 
-import { DiagonalSplit } from '../components'
+import { DiagonalSplit } from '..'
 
 // TODO: Replace with sponsors from CMS
 const tempSponsors = [
@@ -56,8 +56,7 @@ export class Sponsors extends Component {
             <div key={tier.tierName}>
               <h2
                 className="mt-5"
-                style={{ color: tier.color, textAlign: 'center' }}
-                data-aos="fade-right">
+                style={{ color: tier.color, textAlign: 'center' }}>
                 {tier.tierName.toUpperCase()}
               </h2>
 
@@ -65,7 +64,7 @@ export class Sponsors extends Component {
                 {tier.sponsors && tier.sponsors.length ? (
                   tier.sponsors.map(sponsor => (
                     <Col xs="6" sm="4">
-                      <Card data-aos="fade-right">
+                      <Card>
                         <h3>{sponsor.name}</h3>
                       </Card>
                     </Col>

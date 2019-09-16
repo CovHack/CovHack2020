@@ -6,13 +6,9 @@ export const HowToFindUs = props => (
   <Row className="row-eq-height">
     {props.howToFindUs
       .sort((a, b) => a.listOrder - b.listOrder)
-      .map((how, i) => (
+      .map(how => (
         <Col md="12" lg="4" key={how.id} className="mb-3">
-          <Card
-            className="shadow-sm bg-white h-100"
-            data-aos="fade-up"
-            data-aos-delay={i * 200}
-            data-aos-offset="40">
+          <Card className="shadow-sm bg-white h-100">
             <CardBody>
               <CardTitle>
                 <h4>{how.title}</h4>

@@ -1,0 +1,28 @@
+@import '../../scss/colors.scss';
+
+.header {
+  transition: 0.14s ease all;
+  background: rgba($background, 1);
+  color: white;
+}
+
+.header-expand {
+  padding-top: 3em !important;
+  padding-bottom: 2em !important;
+  background: rgba($background, 0);
+}
+
+.header-navbar {
+  background: $background;
+  border-radius: 5px;
+  padding: 0 0.6em !important;
+}
+
+.navbar-brand {
+  display: flex !important;
+  align-items: center;
+
+  * {
+    margin-right: 0.4rem;
+  }
+}

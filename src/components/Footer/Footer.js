@@ -3,7 +3,9 @@ import { Container, Row, Col } from 'reactstrap'
 
 // import { Link } from 'gatsby'
 
-import { DiagonalSplit } from '.'
+import { DiagonalSplit } from '..'
+
+import './Footer.scss'
 
 export const Footer = () => (
   <div className="footer">

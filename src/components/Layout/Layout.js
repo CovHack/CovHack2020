@@ -1,20 +1,14 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Helmet from 'react-helmet'
 
-import { Header, Footer, useSiteMetadata } from '../components'
+import { Header, Footer, useSiteMetadata } from '..'
 
-import AOS from 'aos'
-import 'aos/dist/aos.css'
-
-import '../scss/theme.scss'
-import '../scss/styles.scss'
+import '../../scss/theme.scss'
+import '../../scss/styles.scss'
+import './Layout.scss'
 
 export const Layout = ({ children }) => {
   const { title, description } = useSiteMetadata()
-
-  useEffect(() => {
-    AOS.init({ duration: 1000 })
-  }, [])
 
   return (
     <div>
@@ -29,6 +23,8 @@ export const Layout = ({ children }) => {
         <meta property="og:title" content={title} />
         <meta property="og:url" content="/" />
         <meta property="og:image" content="/img/og-image.jpg" />
+
+        <link rel="stylesheet" href="https://indestructibletype.com/fonts/Jost.css" type="text/css" charset="utf-8" />
       </Helmet>
 
       <div className="site">

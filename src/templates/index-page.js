@@ -1,10 +1,9 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { Link } from 'gatsby'
 import { Container, Card, CardBody } from 'reactstrap'
 import { MdKeyboardArrowDown } from 'react-icons/md'
 
-import { DiagonalSplit, Map, Sponsors, Layout, HowToFindUs } from '../components'
+import { DiagonalSplit, Map, Sponsors, Layout, HowToFindUs, Button } from '../components'
 
 export default function IndexPage({ data }) {
   const { markdownRemark, allMarkdownRemark } = data
@@ -25,15 +24,15 @@ export default function IndexPage({ data }) {
       </div>
 
       <div className="cta-container">
-        <Card className="cta shadow center">
+        <Card className="cta shadow center bg-dark">
           <CardBody>
-            <Link to="/register" className="btn btn-lg btn-primary">
+            <Button primary to="/register">
               Get Tickets
-            </Link>
+            </Button>
 
-            <Link to="#findoutmore" className="btn btn-lg btn-outline-primary grad-text">
+            <Button to="#findoutmore">
               Find Out More <MdKeyboardArrowDown className="brand-color" />
-            </Link>
+            </Button>
           </CardBody>
           <span id="findoutmore" />
         </Card>
@@ -41,16 +40,13 @@ export default function IndexPage({ data }) {
 
       <Container style={{ marginTop: '5em', marginBottom: '5em' }}>
         <div
-          data-aos="fade-up"
           className="markdown-content"
           dangerouslySetInnerHTML={{ __html: html }}
         />
 
         <HowToFindUs howToFindUs={howToFindUs} style={{ marginBottom: '2em' }} />
 
-        <div data-aos="fade-up">
-          <Map />
-        </div>
+        <Map />
       </Container>
 
       <Sponsors className="mb-10" />

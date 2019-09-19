@@ -10,10 +10,6 @@ html {
   scroll-behavior: smooth;
 }
 
-// a {
-//   color: inherit !important;
-// }
-
 .tagline {
   text-align: center;
 }
@@ -52,18 +48,4 @@ html {
 
 .jumbotron-padding {
   padding-top: 8em;
-}
-
-// .brand-bg {
-//   background: $color-primary;
-//   color: white;
-//   padding: 0.4em 1em;
-//   border-radius: 10px;
-// }
-
-.btn-outline-primary > svg {
-  color: $color-primary;
-}
-.btn-outline-primary:hover > svg {
-  color: white;
 }

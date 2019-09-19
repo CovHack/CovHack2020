@@ -52,7 +52,7 @@ export const Header = class extends React.Component {
         <Container>
           <Link to="/" className="navbar-brand">
             <img src="covhack-logo-white.png" alt="CovHack Logo" height={28} />
-            <div className={this.state.expand ? 'brand-bg' : ''}>CovHack</div>
+            <div>CovHack</div>
           </Link>
 
           <NavbarToggler onClick={this.toggle} />
@@ -60,7 +60,7 @@ export const Header = class extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto header-navbar" navbar>
               <NavItemLink to="/">Home</NavItemLink>
-              <NavItemLink to="/register">Register</NavItemLink>
+              {/* <NavItemLink to="/register">Register</NavItemLink> */}
               <NavItemLink to="http://2019.covhack.org" external>
                 2019
               </NavItemLink>

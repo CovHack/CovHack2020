@@ -48,8 +48,9 @@ export class Sponsors extends Component {
 
           <ComingSoon />
 
-          <p className="center mt-4 mb-4">
-            Interested in sponsoring? <a href="mailto:hello@covhack.org">Email us</a>!
+          <p className="mt-4 mb-4" style={{ textAlign: 'center' }}>
+            Interested in sponsoring? Email us at{' '}
+            <a href="mailto:hello@covhack.org">hello@covhack.org</a>!
           </p>
 
           {tempSponsors.map(tier => (

@@ -11,6 +11,8 @@ export default function IndexPage({ data }) {
 
   const howToFindUs = allMarkdownRemark.edges.map(e => ({ ...e.node, ...e.node.frontmatter }))
 
+  const findOutMore = () => document.getElementById('findoutmore').scrollIntoView(true)
+
   return (
     <Layout>
       <div className="jumbo-outer">
@@ -24,13 +26,13 @@ export default function IndexPage({ data }) {
       </div>
 
       <div className="cta-container">
-        <Card className="cta shadow center bg-dark">
+        <Card className="cta shadow bg-dark" style={{ textAlign: 'center' }}>
           <CardBody>
-            <Button primary to="/register">
+            <Button primary internal to="/register" className="button">
               Get Tickets
             </Button>
 
-            <Button to="#findoutmore">
+            <Button onClick={findOutMore} className="button">
               Find Out More <MdKeyboardArrowDown className="brand-color" />
             </Button>
           </CardBody>

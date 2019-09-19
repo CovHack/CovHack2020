@@ -1,5 +1,6 @@
 import React from 'react'
-import { Layout } from '../components'
+
+import { Button, Layout } from '../components'
 
 const NotFoundPage = () => (
   <Layout>
@@ -15,6 +16,11 @@ const NotFoundPage = () => (
         <p>
           if you think there's supposed to be something here, please heckle on{' '}
           <a href="https://twitter.com/jmsve">twitter</a> or something
+        </p>
+        <p>
+          <Button primary to="/">
+            Home
+          </Button>
         </p>
       </div>
     </div>

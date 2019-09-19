@@ -16,7 +16,7 @@ $dim-white: rgba(white, 0.9);
   border-radius: 5px;
   color: $color-primary-dark;
   transition: transform 0.2s, background 0.3s, box-shadow 0.3s, color 0.3s;
-  margin: 0.5rem;
+  cursor: pointer;
 
   > span {
     z-index: 2;

@@ -10,25 +10,21 @@ html {
   scroll-behavior: smooth;
 }
 
-.tagline {
-  text-align: center;
-}
-
-.center {
-  text-align: center;
-}
-
 .jumbo-outer {
   margin-bottom: 2em;
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     url('../img/CH-20190317-12-20-58.jpg');
   background-size: cover;
   background-position: center center;
-}
 
-.jumbo-inner {
-  padding: 5em 1em 4em 1em;
-  color: white;
+  .jumbo-inner {
+    padding: 5em 1em 4em 1em;
+    color: white;
+
+    .tagline {
+      text-align: center;
+    }
+  }
 }
 
 .cta-container {
@@ -39,11 +35,19 @@ html {
   .cta {
     margin: 0 16px;
     border-radius: 10px;
+
+    .button {
+      margin: 0.5rem;
+    }
   }
 }
 
 .markdown-content {
-  line-height: 1.8;
+  line-height: 1.5;
+
+  h1, h2, h3, h4 {
+    padding-top: 1rem;
+  }
 }
 
 .jumbotron-padding {

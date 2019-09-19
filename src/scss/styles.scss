@@ -34,12 +34,12 @@ html {
 .cta-container {
   max-width: 500px;
   margin: auto;
-  margin-top: -132px;
-}
+  margin-top: calc(-100px - 2.5vw);
 
-.cta {
-  margin: 0 16px;
-  border-radius: 10px;
+  .cta {
+    margin: 0 16px;
+    border-radius: 10px;
+  }
 }
 
 .markdown-content {

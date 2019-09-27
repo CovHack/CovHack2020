@@ -19,6 +19,8 @@ export const DiagonalSplit = props => {
         preserveAspectRatio="none">
         <polygon points={polygonPoints} fill={color} />
       </svg>
+
+      {!props.invert && <div className="gap-fill" style={{ outlineColor: color }}></div>}
     </div>
   )
 }

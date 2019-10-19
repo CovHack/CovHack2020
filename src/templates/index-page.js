@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { Container, Card, CardBody } from 'reactstrap'
+import { Container, Card, CardBody, Row, Col } from 'reactstrap'
 import { MdKeyboardArrowDown } from 'react-icons/md'
 
 import { DiagonalSplit, Map, Sponsors, Layout, HowToFindUs, Button } from '../components'
@@ -12,6 +12,12 @@ export default function IndexPage({ data }) {
   const howToFindUs = allMarkdownRemark.edges.map(e => ({ ...e.node, ...e.node.frontmatter }))
 
   const findOutMore = () => document.getElementById('findoutmore').scrollIntoView(true)
+
+  const Emoji = ({ value }) => (
+    <span role="img" aria-label="emoji">
+      {value}
+    </span>
+  )
 
   return (
     <Layout>
@@ -28,7 +34,8 @@ export default function IndexPage({ data }) {
       <div className="cta-container">
         <Card className="cta shadow bg-dark" style={{ textAlign: 'center' }}>
           <CardBody>
-            <Button primary internal to="/register" className="button">
+            {/* TODO: to /register */}
+            <Button primary internal to="" className="button">
               Get Tickets
             </Button>
 
@@ -36,12 +43,44 @@ export default function IndexPage({ data }) {
               Find Out More <MdKeyboardArrowDown className="brand-color" />
             </Button>
           </CardBody>
-          <span id="findoutmore" />
         </Card>
       </div>
 
-      <Container style={{ marginTop: '5em', marginBottom: '5em' }}>
-        <div className="markdown-content" dangerouslySetInnerHTML={{ __html: html }} />
+      <span id="findoutmore" style={{ position: 'absolute', marginTop: '-40px' }} />
+
+      <Container style={{ marginTop: '3em', marginBottom: '3em' }}>
+        <Row>
+          <Col md="12" lg="8">
+            <div className="markdown-content" dangerouslySetInnerHTML={{ __html: html }} />
+          </Col>
+
+          <Col md="12" lg="4">
+            <div className="box card-shadow-effect">
+              <div style={{ padding: '1.5em' }} className="key-points">
+                <ul>
+                  <li>
+                    <Emoji value={'📅'} /> 15-16th February 2020
+                  </li>
+                  <li>
+                    <Emoji value={'🎓'} /> Open to all students
+                  </li>
+                  <li>
+                    <Emoji value={'💸'} /> Free!
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </Col>
+        </Row>
+
+        <h2 style={{ marginTop: '1.5rem' }}>
+          <Emoji value={'📍'} /> How To Find Us
+        </h2>
+
+        <p>
+          CovHack is being held at the Engineering, Environment, and Computing building (known as
+          the EEC) the Coventry University Campus.
+        </p>
 
         <HowToFindUs howToFindUs={howToFindUs} style={{ marginBottom: '2em' }} />
 

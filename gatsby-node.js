@@ -29,6 +29,11 @@ exports.createPages = ({ actions, graphql }) => {
         component: path.resolve(`src/templates/${node.frontmatter.templateKey}.js`),
         context: {},
       })
+
+      createPage({
+        path: '/spinny-thing',
+        component: path.resolve(`src/templates/spinny-thing.js`)
+      })
     })
   })
 }

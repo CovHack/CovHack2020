@@ -24,6 +24,8 @@ export const Layout = ({ children }) => {
         <meta property="og:url" content="/" />
         <meta property="og:image" content="/img/og-image.jpg" />
 
+        <script src="https://js.tito.io/v1" async></script>
+
         <link
           rel="stylesheet"
           href="https://indestructibletype.com/fonts/Jost.css"

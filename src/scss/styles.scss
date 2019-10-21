@@ -1,4 +1,5 @@
 @import './colors';
+@import './tito';
 
 html,
 body {
@@ -92,4 +93,8 @@ html {
     right: 10px;
     left: auto;
   }
+}
+
+img {
+  max-width: 100%;
 }

@@ -21,6 +21,11 @@ exports.createPages = ({ actions, graphql }) => {
       return Promise.reject(result.errors)
     }
 
+    createPage({
+      path: '/spinny-thing',
+      component: path.resolve(`src/templates/spinny-thing.js`),
+    })
+
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
       if (!node.frontmatter.path) return
 
@@ -28,11 +33,6 @@ exports.createPages = ({ actions, graphql }) => {
         path: node.frontmatter.path,
         component: path.resolve(`src/templates/${node.frontmatter.templateKey}.js`),
         context: {},
-      })
-
-      createPage({
-        path: '/spinny-thing',
-        component: path.resolve(`src/templates/spinny-thing.js`)
       })
     })
   })

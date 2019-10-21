@@ -14,7 +14,7 @@ export default function HacktoberfestPage({ data }) {
         <Container className="jumbotron-padding">
           <div className="jumbo-inner">
             <h1 className="tagline">
-              <img src="hacktoberfest-white.png" alt="Hacktoberfest logo" />
+              <img src="/hacktoberfest-white.png" alt="Hacktoberfest logo" />
             </h1>
           </div>
         </Container>
@@ -32,7 +32,7 @@ export default function HacktoberfestPage({ data }) {
         <tito-widget event="covhack/coventry-hacktoberfest-2019"></tito-widget>
 
         <a href="https://hacktoberfest.digitalocean.com/">
-          <img src="hacktoberfest.png" alt="Hacktoberfest logo" />
+          <img src="/hacktoberfest.png" alt="Hacktoberfest logo" />
         </a>
       </Container>
     </Layout>

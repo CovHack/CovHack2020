@@ -51,7 +51,7 @@ export const Header = class extends React.Component {
         }`}>
         <Container>
           <Link to="/" className="navbar-brand">
-            <img src="covhack-logo-white.png" alt="CovHack Logo" height={28} />
+            <img src="/covhack-logo-white.png" alt="CovHack Logo" height={28} />
             <div>CovHack</div>
           </Link>
 

@@ -1,6 +1,7 @@
 {
     "standard.enable": false,
     "cSpell.words": [
+        "covhack",
         "hacktoberfest"
     ]
 }

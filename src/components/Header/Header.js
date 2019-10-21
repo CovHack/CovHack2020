@@ -60,7 +60,9 @@ export const Header = class extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto header-navbar" navbar>
               <NavItemLink to="/">Home</NavItemLink>
-              <NavItemLink to="/hacktoberfest-2019">Hacktoberfest 2019</NavItemLink>
+              <NavItemLink to="/hacktoberfest-2019" external>
+                Hacktoberfest 2019
+              </NavItemLink>
               <NavItemLink to="http://2019.covhack.org" external>
                 CovHack 2019
               </NavItemLink>

@@ -6,10 +6,10 @@ import { DiagonalSplit, Layout } from '../components'
 
 export default function HacktoberfestPage({ data }) {
   const { markdownRemark } = data
-  const { html } = markdownRemark
+  const { html, frontmatter } = markdownRemark
 
   return (
-    <Layout>
+    <Layout titleOverride={frontmatter.title}>
       <div className="jumbo-outer">
         <Container className="jumbotron-padding">
           <div className="jumbo-inner">
@@ -45,7 +45,6 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        tagline
       }
     }
   }

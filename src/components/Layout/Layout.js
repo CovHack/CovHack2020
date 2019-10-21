@@ -7,14 +7,15 @@ import '../../scss/theme.scss'
 import '../../scss/styles.scss'
 import './Layout.scss'
 
-export const Layout = ({ children }) => {
+export const Layout = ({ children, titleOverride }) => {
   const { title, description } = useSiteMetadata()
+  const displayTitle = titleOverride || title
 
   return (
     <div>
       <Helmet>
         <html lang="en" />
-        <title>{title}</title>
+        <title>{displayTitle}</title>
         <meta name="description" content={description} />
 
         <meta name="theme-color" content="#2800ee" />

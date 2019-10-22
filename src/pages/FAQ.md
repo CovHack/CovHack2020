@@ -16,8 +16,6 @@ Definitely bring your laptop and any hardware you require for your project.	We a
 Maximum team size is 4 people.
 #### What if I turn up alone?
 You can either work alone, or we can place you in a team with others.
-#### Can I sleep?
-For legal reasons we cannot officially allow you to sleep within our building, but feel free to rest.
 #### Can I smoke?
 Yep! We have a smoking area near the building.
 #### Who owns the projects?

@@ -10,6 +10,7 @@
     "format": "prettier --write *.js src/**/*.{js,jsx,scss}",
     "start": "npm run develop",
     "serve": "gatsby serve",
+    "clean": "rm -rf public .cache",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "dependencies": {

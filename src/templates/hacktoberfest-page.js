@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { Container } from 'reactstrap'
 
-import { DiagonalSplit, Layout } from '../components'
+import { DiagonalSplit, Layout, Button } from '../components'
 
 export default function HacktoberfestPage({ data }) {
   const { markdownRemark } = data
@@ -22,17 +22,25 @@ export default function HacktoberfestPage({ data }) {
         <DiagonalSplit />
       </div>
 
-      <Container style={{ marginTop: '4rem', marginBottom: '3rem' }}>
+      <Container style={{ marginTop: '2rem', marginBottom: '2rem' }}>
+        <div style={{ textAlign: 'right' }}>
+          <Button primary to="https://ti.to/covhack/coventry-hacktoberfest-2019">
+            Get Tickets
+          </Button>
+        </div>
+
         <div
           className="markdown-content"
           style={{ fontSize: '1.2rem', marginBottom: '2rem' }}
           dangerouslySetInnerHTML={{ __html: html }}
         />
 
+        <h2 style={{ textAlign: 'center' }}>Tickets</h2>
+
         <tito-widget event="covhack/coventry-hacktoberfest-2019"></tito-widget>
 
         <a href="https://hacktoberfest.digitalocean.com/">
-          <img src="/hacktoberfest.png" alt="Hacktoberfest logo" />
+          <img src="/hacktoberfest.png" alt="Hacktoberfest logo" style={{ marginTop: '2em' }} />
         </a>
       </Container>
     </Layout>

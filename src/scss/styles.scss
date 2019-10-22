@@ -98,3 +98,13 @@ html {
 img {
   max-width: 100%;
 }
+
+table {
+  margin-bottom: 1.2rem;
+
+  td,
+  th {
+    border: 1px solid #ddd;
+    padding: 0.3rem 0.6rem;
+  }
+}

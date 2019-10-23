@@ -10,17 +10,23 @@ export const Countdown = ({ targetDate }) => {
     Array(Math.max(digits - String(number).length + 1, 0)).join(0) + number
 
   const updateCountdown = () => {
-    const cd = countdown(new Date(), new Date(targetDate))
+    const target = new Date(targetDate)
+    const now = new Date()
 
-    setDeltas(`${pad(cd.days)}:${pad(cd.hours)}:${pad(cd.minutes)}:${pad(cd.seconds)}`)
+    if (target < now) {
+      // TODO: Flashing 0s instead of "started"
+      setDeltas('STARTED!')
+    } else {
+      const cd = countdown(now, target)
+      setDeltas(`${pad(cd.days)}:${pad(cd.hours)}:${pad(cd.minutes)}:${pad(cd.seconds)}`)
+    }
   }
 
   useEffect(() => {
     updateCountdown()
     const interval = setInterval(() => updateCountdown(), 1000)
-    return () => clearInterval(interval);
-  }, []);
-
+    return () => clearInterval(interval)
+  })
 
   return (
     <div className="countdown-timer">

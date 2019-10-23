@@ -6,5 +6,6 @@ export * from './Layout/Layout'
 export * from './Map/Map'
 export * from './Sponsors/Sponsors'
 export * from './HowToFindUs/HowToFindUs'
+export * from './Countdown/Countdown'
 
 export * from './SiteMetadata'

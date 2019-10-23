@@ -1,8 +1,8 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { Container } from 'reactstrap'
+import { Container, Row, Col } from 'reactstrap'
 
-import { DiagonalSplit, Layout, Button } from '../components'
+import { DiagonalSplit, Layout, Button, Countdown } from '../components'
 
 export default function HacktoberfestPage({ data }) {
   const { markdownRemark } = data
@@ -39,9 +39,16 @@ export default function HacktoberfestPage({ data }) {
 
         <tito-widget event="covhack/coventry-hacktoberfest-2019"></tito-widget>
 
-        <a href="https://hacktoberfest.digitalocean.com/">
-          <img src="/hacktoberfest.png" alt="Hacktoberfest logo" style={{ marginTop: '2em' }} />
-        </a>
+        <Row>
+          <Col>
+            <a href="https://hacktoberfest.digitalocean.com/">
+              <img src="/hacktoberfest.png" alt="Hacktoberfest logo" style={{ marginTop: '2em' }} />
+            </a>
+          </Col>
+          <Col>
+            <Countdown targetDate="2019-10-23 13:00" />
+          </Col>
+        </Row>
       </Container>
     </Layout>
   )

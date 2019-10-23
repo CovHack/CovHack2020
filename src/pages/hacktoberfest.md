@@ -22,7 +22,7 @@ If you've not come along to one of our meetings before, this is a great chance t
 | 13:15       | Introduction                          |
 | 13:30       | Workshop: contributing to open source |
 | 14:00       | Open space for working on projects    |
-| 15:00-17:00 | Repeat of workshop if needed          |
-| 18:00       | Close                                 |
+| 15:00-16:00 | Repeat of workshop if needed          |
+| 16:30       | Close                                 |
 
 For more information, visit [hacktoberfest.digitalocean.com](https://hacktoberfest.digitalocean.com). For this event, we're using [Hacktoberfest's Code of Conduct](https://do.co/hacktoberconduct).

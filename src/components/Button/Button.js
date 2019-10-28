@@ -5,15 +5,21 @@ import './Button.scss'
 import { Link } from 'gatsby'
 
 const InnerButton = props => (
-  <div
-    className={
-      `button button--large header-font` +
-      (props.primary ? ' primary ' : ' ') +
-      (props.className || '')
-    }
-    style={props.style || {}}
-    onClick={props.onClick}>
-    <span>{props.children}</span>
+  <div className="button-container">
+    {props.badge && (
+      <span className="button-badge badge badge-pill badge-warning">{props.badge}</span>
+    )}
+
+    <div
+      className={
+        `button button--large header-font` +
+        (props.primary ? ' primary ' : ' ') +
+        (props.className || '')
+      }
+      style={props.style || {}}
+      onClick={props.onClick}>
+      <span>{props.children}</span>
+    </div>
   </div>
 )
 

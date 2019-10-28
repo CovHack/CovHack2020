@@ -35,7 +35,7 @@ export default function IndexPage({ data }) {
         <Card className="cta shadow bg-dark" style={{ textAlign: 'center' }}>
           <CardBody>
             {/* TODO: to /register */}
-            <Button primary internal to="" className="button">
+            <Button primary internal to="/" className="button" badge="Coming soon">
               Get Tickets
             </Button>
 

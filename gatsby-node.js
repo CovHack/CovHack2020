@@ -26,6 +26,12 @@ exports.createPages = ({ actions, graphql }) => {
       component: path.resolve(`src/templates/spinny-thing.js`),
     })
 
+    createPage({
+      path: '/hellvetica',
+      component: path.resolve(`src/templates/index-page.js`),
+      context: { font: 'Hellvetica, Helvetica, Jost, Arial, sans-serif' }
+    })
+
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
       if (!node.frontmatter.path) return
 

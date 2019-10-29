@@ -5,9 +5,11 @@ import { MdKeyboardArrowDown } from 'react-icons/md'
 
 import { DiagonalSplit, Map, Sponsors, Layout, HowToFindUs, Button } from '../components'
 
-export default function IndexPage({ data }) {
+export default function IndexPage({ data, pageContext: { font } }) {
   const { markdownRemark, allMarkdownRemark } = data
   const { frontmatter, html } = markdownRemark
+
+  if (font) document.body.style.fontFamily = font
 
   const howToFindUs = allMarkdownRemark.edges.map(e => ({ ...e.node, ...e.node.frontmatter }))
 

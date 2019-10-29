@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { graphql } from 'gatsby'
 import { Container, Card, CardBody, Row, Col } from 'reactstrap'
 import { MdKeyboardArrowDown } from 'react-icons/md'
@@ -9,7 +9,9 @@ export default function IndexPage({ data, pageContext: { font } }) {
   const { markdownRemark, allMarkdownRemark } = data
   const { frontmatter, html } = markdownRemark
 
-  if (font) document.body.style.fontFamily = font
+  useEffect(() => {
+    if (font) document.body.style.fontFamily = font
+  })
 
   const howToFindUs = allMarkdownRemark.edges.map(e => ({ ...e.node, ...e.node.frontmatter }))
 

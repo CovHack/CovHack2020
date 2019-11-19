@@ -4,6 +4,4 @@ title: How will communication be done at the event?
 listOrder: 12
 ---
 
-We’ll be using Discord.
-
-You'll receive an link during the week before the event.
+You'll receive a link to join the events chat sometime in the week before.

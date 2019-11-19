@@ -2,11 +2,12 @@ import React, { useEffect } from 'react'
 import { graphql } from 'gatsby'
 import { Container, Card, CardBody, Row, Col } from 'reactstrap'
 import { MdKeyboardArrowDown } from 'react-icons/md'
+import BackgroundImage from 'gatsby-background-image'
 
 import { DiagonalSplit, Map, Sponsors, Layout, HowToFindUs, FAQ, Button } from '../components'
 
 export default function IndexPage({ data, pageContext: { font } }) {
-  const { markdownRemark, allMarkdownRemark } = data
+  const { markdownRemark, allMarkdownRemark, file } = data
   const { frontmatter, html } = markdownRemark
 
   useEffect(() => {
@@ -20,6 +21,8 @@ export default function IndexPage({ data, pageContext: { font } }) {
     .map(e => ({ ...e.node, ...e.node.frontmatter }))
     .filter(e => e.type === 'how-to-find-us')
 
+  const backgroundImage = file.childImageSharp.fluid
+
   const findOutMore = () => document.getElementById('findoutmore').scrollIntoView(true)
 
   const Emoji = ({ value }) => (
@@ -30,15 +33,17 @@ export default function IndexPage({ data, pageContext: { font } }) {
 
   return (
     <Layout>
-      <div className="jumbo-outer">
-        <Container className="jumbotron-padding">
-          <div className="jumbo-inner">
-            <h1 className="tagline">{frontmatter.tagline}</h1>
-          </div>
-        </Container>
+      <BackgroundImage fluid={backgroundImage}>
+        <div className="jumbo-outer">
+          <Container className="jumbotron-padding">
+            <div className="jumbo-inner">
+              <h1 className="tagline">{frontmatter.tagline}</h1>
+            </div>
+          </Container>
 
-        <DiagonalSplit />
-      </div>
+          <DiagonalSplit />
+        </div>
+      </BackgroundImage>
 
       <div className="cta-container">
         <Card className="cta shadow bg-dark" style={{ textAlign: 'center' }}>
@@ -129,6 +134,14 @@ export const pageQuery = graphql`
             listOrder
             type
           }
+        }
+      }
+    }
+
+    file(relativePath: { eq: "CH-20190316-20-27-27.jpg" }) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 1920) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }

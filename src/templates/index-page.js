@@ -13,9 +13,12 @@ export default function IndexPage({ data, pageContext: { font } }) {
     if (font) document.body.style.fontFamily = font
   })
 
-
-  const faq = allMarkdownRemark.edges.map(e => ({ ...e.node, ...e.node.frontmatter })).filter(e => e.type === 'faq')
-  const howToFindUs = allMarkdownRemark.edges.map(e => ({ ...e.node, ...e.node.frontmatter })).filter(e => e.type === 'how-to-find-us')
+  const faq = allMarkdownRemark.edges
+    .map(e => ({ ...e.node, ...e.node.frontmatter }))
+    .filter(e => e.type === 'faq')
+  const howToFindUs = allMarkdownRemark.edges
+    .map(e => ({ ...e.node, ...e.node.frontmatter }))
+    .filter(e => e.type === 'how-to-find-us')
 
   const findOutMore = () => document.getElementById('findoutmore').scrollIntoView(true)
 
@@ -89,21 +92,19 @@ export default function IndexPage({ data, pageContext: { font } }) {
         </p>
 
         <HowToFindUs howToFindUs={howToFindUs} style={{ marginBottom: '2em' }} />
-          
-        <Map />
 
+        <Map />
       </Container>
 
       <Sponsors className="mb-10" />
 
       <Container style={{ marginTop: '3em', marginBottom: '3em' }}>
         <h2 style={{ marginTop: '1.5rem' }}>
-          <Emoji value={'💬'} /> FAQ  
+          <Emoji value={'💬'} /> FAQ
         </h2>
 
         <FAQ faqs={faq} style={{ marginBottom: '2em' }} />
       </Container>
-
     </Layout>
   )
 }
@@ -131,6 +132,5 @@ export const pageQuery = graphql`
         }
       }
     }
-
   }
 `

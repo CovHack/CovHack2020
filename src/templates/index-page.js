@@ -170,6 +170,7 @@ export const pageQuery = graphql`
           html
           frontmatter {
             name
+            role
             image
             listOrder
             type

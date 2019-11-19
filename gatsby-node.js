@@ -29,7 +29,7 @@ exports.createPages = ({ actions, graphql }) => {
     createPage({
       path: '/hellvetica',
       component: path.resolve(`src/templates/index-page.js`),
-      context: { font: 'Hellvetica, Helvetica, Jost, Arial, sans-serif' }
+      context: { font: 'Hellvetica, Helvetica, Jost, Arial, sans-serif' },
     })
 
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {

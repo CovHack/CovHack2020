@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import { Container, Card, CardBody, Row, Col } from 'reactstrap'
 import { MdKeyboardArrowDown } from 'react-icons/md'
 
-import { DiagonalSplit, Map, Sponsors, Layout, HowToFindUs, Button } from '../components'
+import { DiagonalSplit, Map, Sponsors, Layout, HowToFindUs, FAQ, Button } from '../components'
 
 export default function IndexPage({ data, pageContext: { font } }) {
   const { markdownRemark, allMarkdownRemark } = data
@@ -13,7 +13,9 @@ export default function IndexPage({ data, pageContext: { font } }) {
     if (font) document.body.style.fontFamily = font
   })
 
-  const howToFindUs = allMarkdownRemark.edges.map(e => ({ ...e.node, ...e.node.frontmatter }))
+
+  const faq = allMarkdownRemark.edges.map(e => ({ ...e.node, ...e.node.frontmatter })).filter(e => e.type === 'faq')
+  const howToFindUs = allMarkdownRemark.edges.map(e => ({ ...e.node, ...e.node.frontmatter })).filter(e => e.type === 'how-to-find-us')
 
   const findOutMore = () => document.getElementById('findoutmore').scrollIntoView(true)
 
@@ -87,8 +89,17 @@ export default function IndexPage({ data, pageContext: { font } }) {
         </p>
 
         <HowToFindUs howToFindUs={howToFindUs} style={{ marginBottom: '2em' }} />
-
+          
         <Map />
+
+
+        <h2 style={{ marginTop: '1.5rem' }}>
+          <Emoji value={'💬'} /> FAQ  
+        </h2>
+
+        <FAQ faqs={faq} style={{ marginBottom: '2em' }} />
+
+
       </Container>
 
       <Sponsors className="mb-10" />
@@ -106,7 +117,7 @@ export const pageQuery = graphql`
       }
     }
 
-    allMarkdownRemark(filter: { frontmatter: { type: { eq: "how-to-find-us" } } }) {
+    allMarkdownRemark(filter: { frontmatter: { type: { in: ["how-to-find-us", "faq"] } } }) {
       edges {
         node {
           id
@@ -114,9 +125,11 @@ export const pageQuery = graphql`
           frontmatter {
             title
             listOrder
+            type
           }
         }
       }
     }
+
   }
 `

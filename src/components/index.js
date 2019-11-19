@@ -7,5 +7,5 @@ export * from './Map/Map'
 export * from './Sponsors/Sponsors'
 export * from './HowToFindUs/HowToFindUs'
 export * from './Countdown/Countdown'
-
+export * from './FAQ/FAQ'
 export * from './SiteMetadata'

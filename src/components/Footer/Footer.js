@@ -1,5 +1,6 @@
 import React from 'react'
-import { Container, Row, Col } from 'reactstrap'
+import { FaHeart, FaTwitter } from 'react-icons/fa'
+import { MdEmail } from 'react-icons/md'
 
 // import { Link } from 'gatsby'
 
@@ -11,16 +12,19 @@ export const Footer = () => (
   <div className="footer">
     <DiagonalSplit invert />
     <div className="footer-inner">
-      <Container>
-        <Row>
-          <Col>
-            <div style={{ whiteSpace: 'nowrap' }}>© 2019 Coventry University Hackathon Society</div>
-          </Col>
-          <Col>
-            <div>hello@covhack.org</div>
-          </Col>
-        </Row>
-      </Container>
+      <div class="love">
+        Made with <FaHeart /> by <a href="https://www.cusu.org/society/hackathon/">CovHackSoc</a>
+      </div>
+      <div>
+        <div>
+          <FaTwitter /> <a href="https://twitter.com/covhack">@covhack</a>
+          {' / '}
+          <a href="https://twitter.com/covhacksoc">@covhacksoc</a>
+        </div>
+        <div>
+          <MdEmail /> <a href="mailto:hello@covhack.org">hello@covhack.org</a>
+        </div>
+      </div>
     </div>
   </div>
 )

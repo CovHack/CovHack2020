@@ -1,8 +1,7 @@
 import React from 'react'
 import Img from 'gatsby-image'
 
-import { FaInstagram, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
-import { Row, Col, Card, CardBody, CardImg, CardTitle, CardSubtitle, CardText } from 'reactstrap'
+import { Row, Col, Card, CardBody, CardTitle, CardSubtitle, CardText } from 'reactstrap'
 import { graphql, useStaticQuery } from 'gatsby'
 import { Socials } from '../../components'
 

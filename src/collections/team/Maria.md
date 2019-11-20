@@ -3,6 +3,8 @@ type: team
 name: Maria
 role: Vice President
 socials:
+    linkedin: mariamsaveiro
+    github: aveirinha
 listOrder: 2
 ---
 

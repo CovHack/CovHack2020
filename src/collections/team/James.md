@@ -7,6 +7,7 @@ socials:
     github: jmsv
     instagram: jmsve
     linkedin: jamesevickery
+    devpost: jamesvickery
 listOrder: 1
 ---
 

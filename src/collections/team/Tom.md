@@ -4,6 +4,7 @@ name: Tom
 role: Inclusion Officer
 socials:
     twitter: hackt0m
+    devpost: ThomasAtkinson
 listOrder: 4
 ---
 

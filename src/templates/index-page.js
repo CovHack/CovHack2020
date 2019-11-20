@@ -176,6 +176,7 @@ export const pageQuery = graphql`
               twitter
               linkedin
               instagram
+              devpost
             }
             listOrder
             type

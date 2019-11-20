@@ -3,6 +3,9 @@ type: team
 name: Jonny
 role: Treasurer
 socials:
+    github: j-m
+    linkedin: jonrmarsh
+    devpost: jauntum
 listOrder: 3
 ---
 

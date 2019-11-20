@@ -5,6 +5,8 @@ import { Row, Col, Card, CardBody, CardTitle, CardSubtitle, CardText } from 'rea
 import { graphql, useStaticQuery } from 'gatsby'
 import { Socials } from '../../components'
 
+import './Team.scss'
+
 export const Team = props => {
   const listOfFiles = useStaticQuery(imageQuery).allFile.edges
   const allFiles = Object.assign(
@@ -19,13 +21,13 @@ export const Team = props => {
           <Col md="12" lg="4" key={member.id} className="mb-3">
             <Card className="shadow-sm bg-white h-100">
               <CardBody>
-                <Img fluid={allFiles[member.name]} style={{ margin: '0.75em 0' }} />
+                <Img fluid={allFiles[member.name]} className='image' />
                 <CardTitle style={{ marginBottom: '1em' }}>
                   <Socials socials={member.socials} />
                   <h4>{member.name}</h4>
                 </CardTitle>
                 <CardSubtitle>
-                  <h6 style={{ opacity: 0.75 }}>{member.role}</h6>
+                  <h6 className="role">{member.role}</h6>
                 </CardSubtitle>
                 <CardText>
                   <div dangerouslySetInnerHTML={{ __html: member.html }} />

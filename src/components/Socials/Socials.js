@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaInstagram, FaGithub, FaLinkedin, FaTwitter, FaDev } from 'react-icons/fa'
+import { FaInstagram, FaGithub, FaLinkedin, FaTwitter, FaCode } from 'react-icons/fa'
 
 import './Socials.scss'
 
@@ -39,7 +39,7 @@ export const Socials = props => {
           {props.socials.devpost && (
             <span className="separator">
               <a href={`https://devpost.com/${props.socials.devpost}`}>
-                <FaDev />
+                <FaCode />
               </a>
             </span>
           )}

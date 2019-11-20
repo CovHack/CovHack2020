@@ -1,12 +1,12 @@
 ---
 type: faq
-title: What Should I Bring?
+title: What should I bring?
 listOrder: 10
 ---
 
 We highly recommend you bring the following:
 
-* A Laptop (or your gaming rig :))
+* A Laptop (or your gaming rig :) )
 * A charger
 * Deodorant
 * Toothbrush + Toothpaste

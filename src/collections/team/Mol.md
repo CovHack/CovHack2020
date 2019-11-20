@@ -6,7 +6,6 @@ socials:
     twitter: firatcliffe
     github: firatcliffe
     linkedin: florenceratcliffe
-image: http://via.placeholder.com/150
 listOrder: 5
 ---
 Mol is CovHackSoc’s Social Media and PR Rep.

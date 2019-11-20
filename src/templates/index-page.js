@@ -171,7 +171,6 @@ export const pageQuery = graphql`
           frontmatter {
             name
             role
-            image
             socials {
               github
               twitter

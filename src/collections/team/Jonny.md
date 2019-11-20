@@ -3,7 +3,6 @@ type: team
 name: Jonny
 role: Treasurer
 socials:
-image: http://via.placeholder.com/150
 listOrder: 3
 ---
 

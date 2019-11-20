@@ -3,7 +3,6 @@ type: team
 name: Maria
 role: Vice President
 socials:
-image: http://via.placeholder.com/150
 listOrder: 2
 ---
 

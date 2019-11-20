@@ -4,7 +4,6 @@ name: Tom
 role: Inclusion Officer
 socials:
     twitter: hackt0m
-image: http://via.placeholder.com/150
 listOrder: 4
 ---
 

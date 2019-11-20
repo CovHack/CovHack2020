@@ -7,7 +7,6 @@ socials:
     github: jmsv
     instagram: jmsve
     linkedin: jamesevickery
-image: http://via.placeholder.com/150
 listOrder: 1
 ---
 

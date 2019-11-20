@@ -4,6 +4,7 @@ import Img from 'gatsby-image'
 import { FaInstagram, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
 import { Row, Col, Card, CardBody, CardImg, CardTitle, CardSubtitle, CardText } from 'reactstrap'
 import { graphql, useStaticQuery } from 'gatsby'
+import { Socials } from '../../components'
 
 export const Team = props => {
   const listOfFiles = useStaticQuery(imageQuery).allFile.edges
@@ -20,7 +21,9 @@ export const Team = props => {
             <Card className="shadow-sm bg-white h-100">
               <CardBody>
                 <Img fluid={allFiles[member.name]} style={{ margin: '0.5em'}}/>
-                <CardTitle style={{ marginBottom: '1em' }}>
+                  <CardTitle style={{ marginBottom: '1em' }}>
+
+                  <Socials socials={member.socials} />
                   <h4>{member.name}</h4>
                 </CardTitle>
                 <CardSubtitle>

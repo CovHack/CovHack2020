@@ -20,9 +20,8 @@ export const Team = props => {
           <Col md="12" lg="4" key={member.id} className="mb-3">
             <Card className="shadow-sm bg-white h-100">
               <CardBody>
-                <Img fluid={allFiles[member.name]} style={{ margin: '0.5em'}}/>
-                  <CardTitle style={{ marginBottom: '1em' }}>
-
+                <Img fluid={allFiles[member.name]} style={{ margin: '0.5em' }} />
+                <CardTitle style={{ marginBottom: '1em' }}>
                   <Socials socials={member.socials} />
                   <h4>{member.name}</h4>
                 </CardTitle>

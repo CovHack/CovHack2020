@@ -10,31 +10,41 @@ export const Socials = props => {
         <div>
           {props.socials.twitter && (
             <span className="separator">
-              <a href={`https://twitter.com/${props.socials.twitter}`}><FaTwitter /></a>
+              <a href={`https://twitter.com/${props.socials.twitter}`}>
+                <FaTwitter />
+              </a>
             </span>
           )}
           {props.socials.github && (
             <span className="separator">
-              <a href={`https://github.com/${props.socials.github}`}><FaGithub /></a>
+              <a href={`https://github.com/${props.socials.github}`}>
+                <FaGithub />
+              </a>
             </span>
           )}
           {props.socials.linkedin && (
             <span className="separator">
-              <a href={`https://linkedin.com/in/${props.socials.linkedin}`}><FaLinkedin /></a>
+              <a href={`https://linkedin.com/in/${props.socials.linkedin}`}>
+                <FaLinkedin />
+              </a>
             </span>
           )}
           {props.socials.instagram && (
             <span className="separator">
-              <a href={`https://instagram.com/${props.socials.instagram}`}><FaInstagram /></a>
+              <a href={`https://instagram.com/${props.socials.instagram}`}>
+                <FaInstagram />
+              </a>
             </span>
           )}
           {props.socials.devpost && (
             <span className="separator">
-              <a href={`https://devpost.com/${props.socials.devpost}`}><FaDev /></a>
+              <a href={`https://devpost.com/${props.socials.devpost}`}>
+                <FaDev />
+              </a>
             </span>
           )}
         </div>
-      )}  
+      )}
     </div>
   )
 }

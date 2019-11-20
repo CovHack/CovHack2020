@@ -19,12 +19,12 @@ export const Team = props => {
           <Col md="12" lg="4" key={member.id} className="mb-3">
             <Card className="shadow-sm bg-white h-100">
               <CardBody>
-                <Img fluid={allFiles[member.name]} />
-                <CardTitle>
+                <Img fluid={allFiles[member.name]} style={{ margin: '0.5em'}}/>
+                <CardTitle style={{ marginBottom: '1em' }}>
                   <h4>{member.name}</h4>
                 </CardTitle>
                 <CardSubtitle>
-                  <h6>{member.role}</h6>
+                  <h6 style={{ opacity: 0.75 }}>{member.role}</h6>
                 </CardSubtitle>
                 <CardText>
                   <div dangerouslySetInnerHTML={{ __html: member.html }} />

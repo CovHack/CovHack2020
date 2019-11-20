@@ -4,22 +4,25 @@ import { Container, Card, CardBody, Row, Col } from 'reactstrap'
 import { MdKeyboardArrowDown } from 'react-icons/md'
 import BackgroundImage from 'gatsby-background-image'
 
-import { DiagonalSplit, Map, Sponsors, Layout, HowToFindUs, FAQ, Button } from '../components'
+import { DiagonalSplit, Map, Sponsors, Layout, HowToFindUs, FAQ, Team, Button } from '../components'
 
 export default function IndexPage({ data, pageContext: { font } }) {
-  const { markdownRemark, allMarkdownRemark, file } = data
+  const { markdownRemark, howToFindUs, faq, team, file } = data
   const { frontmatter, html } = markdownRemark
 
   useEffect(() => {
     if (font) document.body.style.fontFamily = font
   })
 
-  const faq = allMarkdownRemark.edges
+  const faqData = faq.edges
     .map(e => ({ ...e.node, ...e.node.frontmatter }))
     .filter(e => e.type === 'faq')
-  const howToFindUs = allMarkdownRemark.edges
+  const howToFindUsData = howToFindUs.edges
     .map(e => ({ ...e.node, ...e.node.frontmatter }))
     .filter(e => e.type === 'how-to-find-us')
+  const teamData = team.edges
+    .map(e => ({ ...e.node, ...e.node.frontmatter }))
+    .filter(e => e.type === 'team')
 
   const backgroundImage = file.childImageSharp.fluid
 
@@ -96,7 +99,7 @@ export default function IndexPage({ data, pageContext: { font } }) {
           the EEC) the Coventry University Campus.
         </p>
 
-        <HowToFindUs howToFindUs={howToFindUs} style={{ marginBottom: '2em' }} />
+        <HowToFindUs howToFindUs={howToFindUsData} style={{ marginBottom: '2em' }} />
 
         <Map />
       </Container>
@@ -108,7 +111,15 @@ export default function IndexPage({ data, pageContext: { font } }) {
           <Emoji value={'💬'} /> FAQ
         </h2>
 
-        <FAQ faqs={faq} style={{ marginBottom: '2em' }} />
+        <FAQ faqs={faqData} style={{ marginBottom: '2em' }} />
+      </Container>
+
+      <Container style={{ marginTop: '3em', marginBottom: '3em' }}>
+        <h2 style={{ marginTop: '1.5rem' }}>
+          <Emoji value={'👩'} /> Team
+        </h2>
+
+        <Team team={teamData} style={{ marginBottom: '2em' }} />
       </Container>
     </Layout>
   )
@@ -124,13 +135,49 @@ export const pageQuery = graphql`
       }
     }
 
-    allMarkdownRemark(filter: { frontmatter: { type: { in: ["how-to-find-us", "faq"] } } }) {
+    howToFindUs: allMarkdownRemark(filter: { frontmatter: { type: { eq: "how-to-find-us" } } }) {
       edges {
         node {
           id
           html
           frontmatter {
             title
+            listOrder
+            type
+          }
+        }
+      }
+    }
+
+    faq: allMarkdownRemark(filter: { frontmatter: { type: { eq: "faq" } } }) {
+      edges {
+        node {
+          id
+          html
+          frontmatter {
+            title
+            listOrder
+            type
+          }
+        }
+      }
+    }
+
+    team: allMarkdownRemark(filter: { frontmatter: { type: { eq: "team" } } }) {
+      edges {
+        node {
+          id
+          html
+          frontmatter {
+            name
+            role
+            socials {
+              github
+              twitter
+              linkedin
+              instagram
+              devpost
+            }
             listOrder
             type
           }

@@ -11,7 +11,6 @@ export const Team = props => {
     {},
     ...listOfFiles.map(item => ({ [item.node.name]: item.node.childImageSharp.fluid }))
   )
-  console.log(allFiles)
   return (
     <Row className="row-eq-height">
       {props.team

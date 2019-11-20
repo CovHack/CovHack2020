@@ -14,20 +14,16 @@ export const Footer = () => (
     <DiagonalSplit invert />
     <div className="footer-inner">
       <Container>
-        <div style={{ whiteSpace: 'nowrap' }}>
+        <div className="love">
           Made with <FaHeart /> by <a href="https://www.cusu.org/society/hackathon/">CovHackSoc</a>
         </div>
-        <br />
         <div>
-          <FaTwitter />
-          <span> </span>
-          <a href="https://twitter.com/covhack">@covhack</a> /<span> </span>
+          <FaTwitter /> <a href="https://twitter.com/covhack">@covhack</a>
+          {' / '}
           <a href="https://twitter.com/covhacksoc">@covhacksoc</a>
         </div>
         <div>
-          <MdEmail />
-          <span> </span>
-          <a href="mailto:hello@covhack.org">hello@covhack.org</a>
+          <MdEmail /> <a href="mailto:hello@covhack.org">hello@covhack.org</a>
         </div>
       </Container>
     </div>

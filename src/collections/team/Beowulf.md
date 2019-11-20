@@ -3,6 +3,10 @@ type: team
 name: Beowulf
 image: http://via.placeholder.com/150
 role: Technical Lead / Former President
+socials:
+    twitter: baahorn
+    github: bahorn
+    instagram: bahorn
 listOrder: 6
 ---
 

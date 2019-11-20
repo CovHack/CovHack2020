@@ -2,6 +2,11 @@
 type: team
 name: James
 role: President / Lead Organiser
+socials:
+    twitter: jmsve
+    github: jmsv
+    instagram: jmsve
+    linkedin: jamesevickery
 image: http://via.placeholder.com/150
 listOrder: 1
 ---

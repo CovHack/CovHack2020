@@ -172,6 +172,12 @@ export const pageQuery = graphql`
             name
             role
             image
+            socials {
+              github
+              twitter
+              linkedin
+              instagram
+            }
             listOrder
             type
           }

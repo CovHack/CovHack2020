@@ -1,6 +1,7 @@
 import React from 'react'
-
+import { FaInstagram, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import { Row, Col, Card, CardBody, CardImg, CardTitle, CardSubtitle, CardText } from 'reactstrap'
+
 
 export const Team = props => (
   <Row className="row-eq-height">
@@ -17,6 +18,11 @@ export const Team = props => (
               <CardSubtitle>
                 <h6>{member.role}</h6>
               </CardSubtitle>
+              <CardText>
+                <div>
+                  
+                </div>
+              </CardText>
               <CardText>
                 <div dangerouslySetInnerHTML={{ __html: member.html }} />
               </CardText>

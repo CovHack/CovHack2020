@@ -96,7 +96,7 @@ export default function IndexPage({ data, pageContext: { font } }) {
 
         <p>
           CovHack is being held at the Engineering, Environment, and Computing building (known as
-          the EEC) the Coventry University Campus.
+          the EEC) at the Coventry University Campus.
         </p>
 
         <HowToFindUs howToFindUs={howToFindUsData} style={{ marginBottom: '2em' }} />

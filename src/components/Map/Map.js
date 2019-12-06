@@ -12,7 +12,7 @@ L.Icon.Default.mergeOptions({
     iconRetinaUrl: require('leaflet/dist/images/marker-icon-2x.png'),
     iconUrl: require('leaflet/dist/images/marker-icon.png'),
     shadowUrl: require('leaflet/dist/images/marker-shadow.png')
-});
+})
 
 
 const AlwaysOpenMarker = props => {
@@ -26,24 +26,30 @@ const AlwaysOpenMarker = props => {
 
 export const Map = () => {
   const {accessToken, url, id, attribution, location} = useStaticQuery(mapQuery).site.siteMetadata.map
-  return (
-    <div className="map-responsive mt-5 mb-5">
-      <LeafletMap className="leaflet-map"center={location.position} zoom={16}>
-        <TileLayer
-          url={url}
-          id={id}
-          accessToken={accessToken}
-          attribution={attribution}
-          />
-          <AlwaysOpenMarker position={location.position}>
-            <Popup>
-              <b>{location.name}</b>
-              <br/>{location.description}
-            </Popup>
-          </AlwaysOpenMarker>
-      </LeafletMap>
-    </div>
-  );
+  if (typeof window !== 'undefined') {
+
+    return (
+      
+      <div className="map-responsive mt-5 mb-5">
+        <LeafletMap className="leaflet-map"center={location.position} zoom={16}>
+          <TileLayer
+            url={url}
+            id={id}
+            accessToken={accessToken}
+            attribution={attribution}
+            />
+            <AlwaysOpenMarker position={location.position}>
+              <Popup>
+                <b>{location.name}</b>
+                <br/>{location.description}
+              </Popup>
+            </AlwaysOpenMarker>
+        </LeafletMap>
+      </div>
+    )
+  }
+  return null
+    
 }
 
 const mapQuery = graphql`

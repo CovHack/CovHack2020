@@ -1,6 +1,8 @@
+$map-height: 300px;
+
 .map-responsive {
   overflow: hidden;
-  padding-bottom: 300px;
+  padding-bottom: $map-height;
   position: relative;
   border-radius: 0.3rem;
   height: 0;
@@ -12,4 +14,8 @@
   height: 100%;
   width: 100%;
   position: absolute;
+}
+
+.leaflet-map {
+  height: $map-height;
 }

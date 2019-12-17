@@ -4,7 +4,7 @@ import { Container, Card, CardBody, Row, Col } from 'reactstrap'
 import { MdKeyboardArrowDown } from 'react-icons/md'
 import BackgroundImage from 'gatsby-background-image'
 
-import { DiagonalSplit, Map, Sponsors, Layout, HowToFindUs, FAQ, Team, Button } from '../components'
+import { DiagonalSplit, Map, Sponsors, Layout, HowToFindUs, FAQ, Team, Button, MLHTrustBadge } from '../components'
 
 export default function IndexPage({ data, pageContext: { font } }) {
   const { markdownRemark, howToFindUs, faq, team, file } = data
@@ -121,6 +121,7 @@ export default function IndexPage({ data, pageContext: { font } }) {
 
         <Team team={teamData} style={{ marginBottom: '2em' }} />
       </Container>
+      <MLHTrustBadge />
     </Layout>
   )
 }

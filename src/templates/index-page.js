@@ -17,7 +17,7 @@ import {
 } from '../components'
 
 export default function IndexPage({ data, pageContext: { font } }) {
-  const { markdownRemark, howToFindUs, faq, team, file } = data
+  const { markdownRemark, howToFindUs, faq, team, file, sponsor } = data
   const { frontmatter, html } = markdownRemark
 
   useEffect(() => {
@@ -33,6 +33,9 @@ export default function IndexPage({ data, pageContext: { font } }) {
   const teamData = team.edges
     .map(e => ({ ...e.node, ...e.node.frontmatter }))
     .filter(e => e.type === 'team')
+  const sponsorData = sponsor.edges
+    .map(e => ({ ...e.node, ...e.node.frontmatter }))
+    .filter(e => e.type === 'sponsor')
 
   const backgroundImage = file.childImageSharp.fluid
 
@@ -114,7 +117,7 @@ export default function IndexPage({ data, pageContext: { font } }) {
         <Map />
       </Container>
 
-      <Sponsors className="mb-10" />
+      <Sponsors sponsors={sponsorData} className="mb-10" />
 
       <Container style={{ marginTop: '3em', marginBottom: '3em' }}>
         <h2 style={{ marginTop: '1.5rem' }}>
@@ -191,6 +194,21 @@ export const pageQuery = graphql`
               devpost
             }
             listOrder
+            type
+          }
+        }
+      }
+    }
+
+    sponsor: allMarkdownRemark(filter: { frontmatter: { type: { eq: "sponsor" } } }) {
+      edges {
+        node {
+          id
+          frontmatter {
+            name
+            url
+            logo
+            tier
             type
           }
         }

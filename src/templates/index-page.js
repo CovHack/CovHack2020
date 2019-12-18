@@ -102,7 +102,7 @@ export default function IndexPage({ data, pageContext: { font } }) {
           </Col>
         </Row>
 
-        <h2>
+        <h2 style={{ marginTop: '1.5rem' }}>
           <Emoji value={'🎫'} /> Tickets
         </h2>
 

@@ -1,27 +1,15 @@
 import React from 'react'
 
-export const MLHTrustBadge = () => (
-  <div>
+import './mlhtrustbadge.scss'
+
+export const MLHTrustBadge = ({ color, year, region }) => (
+  <div className="mlh-trust-badge">
     <a
-      id="mlh-trust-badge"
-      style={{
-        display: 'block',
-        'max-width': '100px',
-        'min-width': '60px',
-        position: 'fixed',
-        right: '50px',
-        top: 0,
-        width: '10%',
-        'z-index': 10000,
-      }}
-      href="https://mlh.io/seasons/eu-2020/events?utm_source=eu-hackathon&utm_medium=TrustBadge&utm_campaign=2020-season&utm_content=black"
+      href={`https://mlh.io/seasons/${region}-${year}/events?utm_source=${region}-hackathon&utm_medium=TrustBadge&utm_campaign=${year}-season&utm_content=${color}`}
       target="_blank">
       <img
-        src="https://s3.amazonaws.com/logged-assets/trust-badge/2020/mlh-trust-badge-2020-black.svg"
-        alt="Major League Hacking 2020 Hackathon Season"
-        style={{
-          width: '100%',
-        }}
+        src={`https://s3.amazonaws.com/logged-assets/trust-badge/${year}/mlh-trust-badge-${year}-${color}.svg`}
+        alt={`Major League Hacking ${year} Hackathon Season`}
       />
     </a>
   </div>

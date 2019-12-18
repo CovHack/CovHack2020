@@ -12,7 +12,7 @@ export const Footer = () => (
   <div className="footer">
     <DiagonalSplit invert />
     <div className="footer-inner">
-      <div class="love">
+      <div className="love">
         Made with <FaHeart /> by <a href="https://www.cusu.org/society/hackathon/">CovHackSoc</a>
       </div>
       <div>

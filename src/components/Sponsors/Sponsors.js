@@ -33,6 +33,7 @@ const sponsorTiers = {
     color: '#323232',
     order: 5,
     companies: [],
+    height: '250px',
   },
 }
 
@@ -55,7 +56,7 @@ const Tier = ({ tier }) => (
         tier.companies.map(sponsor => (
           <Col xs="6" sm="4">
             <a href={sponsor.url}>
-              <img src={sponsor.logo} alt={sponsor.name} />
+              <img src={sponsor.logo} alt={sponsor.name} height={tier.height || "500px"}/>
             </a>
           </Col>
         ))

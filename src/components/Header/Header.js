@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Collapse, Navbar, NavbarToggler, Nav, NavItem, Container } from 'reactstrap'
 import { Link } from 'gatsby'
 
@@ -18,58 +18,46 @@ const NavItemLink = props => (
   </NavItem>
 )
 
-export const Header = class extends React.Component {
-  state = {
-    expand: true,
-  }
+export const Header = ({ clearBadge }) => {
+  const [expand, setExpand] = useState(true)
+  const [isOpen, setIsOpen] = useState(false)
 
-  constructor(props) {
-    super(props)
+  const toggle = () => setIsOpen(!isOpen)
 
-    this.toggle = this.toggle.bind(this)
-    this.state = {
-      isOpen: false,
-    }
-  }
+  const updateExpand = () => setExpand(window.scrollY < 60)
 
-  toggle = () => this.setState({ isOpen: !this.state.isOpen })
+  useEffect(() => {
+    updateExpand
+    window.addEventListener('scroll', updateExpand)
+  })
 
-  expand = () => this.setState({ expand: window.scrollY < 60 })
+  return (
+    <Navbar
+      light
+      expand={clearBadge ? 'xl' : 'md'}
+      className={`navbar navbar-dark fixed-top header ${clearBadge ? 'clear-badge' : ''} ${
+        expand ? 'header-expand' : 'shadow-sm'
+      }`}>
+      <Container>
+        <Link to="/" className="navbar-brand">
+          <img src="/covhack-logo-white.png" alt="CovHack Logo" height={28} />
+          <div>CovHack</div>
+        </Link>
 
-  componentDidMount() {
-    this.expand()
-    window.addEventListener('scroll', this.expand)
-  }
+        <NavbarToggler onClick={toggle} />
 
-  render() {
-    return (
-      <Navbar
-        light
-        expand="md"
-        className={`navbar navbar-dark fixed-top header ${
-          this.state.expand ? 'header-expand' : 'shadow-sm'
-        }`}>
-        <Container>
-          <Link to="/" className="navbar-brand">
-            <img src="/covhack-logo-white.png" alt="CovHack Logo" height={28} />
-            <div>CovHack</div>
-          </Link>
-
-          <NavbarToggler onClick={this.toggle} />
-
-          <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav className="ml-auto header-navbar" navbar>
-              <NavItemLink to="/">Home</NavItemLink>
-              <NavItemLink to="/hacktoberfest-2019" external>
-                Hacktoberfest 2019
-              </NavItemLink>
-              <NavItemLink to="http://2019.covhack.org" external>
-                CovHack 2019
-              </NavItemLink>
-            </Nav>
-          </Collapse>
-        </Container>
-      </Navbar>
-    )
-  }
+        <Collapse isOpen={isOpen} navbar>
+          <Nav className="ml-auto header-navbar" navbar>
+            <NavItemLink to="/">Home</NavItemLink>
+            <NavItemLink to="/hacktoberfest-2019" external>
+              Hacktoberfest
+            </NavItemLink>
+            <NavItemLink to="http://2019.covhack.org" external>
+              CovHack 2019
+            </NavItemLink>
+          </Nav>
+        </Collapse>
+      </Container>
+    </Navbar>
+  )
 }

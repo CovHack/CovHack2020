@@ -7,7 +7,7 @@ import '../../scss/theme.scss'
 import '../../scss/styles.scss'
 import './Layout.scss'
 
-export const Layout = ({ children, titleOverride }) => {
+export const Layout = ({ children, titleOverride, clearBadge }) => {
   const { title, description } = useSiteMetadata()
   const displayTitle = titleOverride || title
 
@@ -36,7 +36,7 @@ export const Layout = ({ children, titleOverride }) => {
       </Helmet>
 
       <div className="site">
-        <Header />
+        <Header clearBadge={clearBadge} />
 
         <div className="site-content">{children}</div>
 

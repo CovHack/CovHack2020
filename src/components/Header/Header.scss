@@ -26,3 +26,17 @@
     margin-right: 0.4rem;
   }
 }
+
+.clear-badge {
+  @media only screen and (max-width: 1500px) {
+    .navbar-nav {
+      margin-right: 80px;
+    }
+  }
+
+  @media only screen and (max-width: 1400px) {
+    .navbar-nav {
+      margin-right: 140px;
+    }
+  }
+}

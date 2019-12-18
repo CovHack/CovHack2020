@@ -64,8 +64,7 @@ export default function IndexPage({ data, pageContext: { font } }) {
       <div className="cta-container">
         <Card className="cta shadow bg-dark" style={{ textAlign: 'center' }}>
           <CardBody>
-            {/* TODO: to /register */}
-            <Button primary internal to="/" className="button" badge="Coming soon">
+            <Button primary to="https://ti.to/covhack/covhack2020" className="button">
               Get Tickets
             </Button>
 
@@ -104,6 +103,16 @@ export default function IndexPage({ data, pageContext: { font } }) {
         </Row>
 
         <h2 style={{ marginTop: '1.5rem' }}>
+          <Emoji value={'🎫'} /> Tickets
+        </h2>
+
+        <tito-widget event="covhack/covhack2020"></tito-widget>
+      </Container>
+
+      <Sponsors sponsors={sponsorData} className="mb-10" />
+
+      <Container style={{ marginTop: '3em', marginBottom: '3em' }}>
+        <h2 style={{ marginTop: '1.5rem' }}>
           <Emoji value={'📍'} /> How To Find Us
         </h2>
 
@@ -116,8 +125,6 @@ export default function IndexPage({ data, pageContext: { font } }) {
 
         <Map />
       </Container>
-
-      <Sponsors sponsors={sponsorData} className="mb-10" />
 
       <Container style={{ marginTop: '3em', marginBottom: '3em' }}>
         <h2 style={{ marginTop: '1.5rem' }}>

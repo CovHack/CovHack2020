@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './mlhtrustbadge.scss'
+import './MLHTrustBadge.scss'
 
 export const MLHTrustBadge = ({ color, year, region }) => (
   <div className="mlh-trust-badge">

@@ -45,7 +45,7 @@ export default function IndexPage({ data, pageContext: { font } }) {
   )
 
   return (
-    <Layout>
+    <Layout clearBadge={true}>
       <BackgroundImage fluid={backgroundImage}>
         <div className="jumbo-outer">
           <Container className="jumbotron-padding">
@@ -131,6 +131,7 @@ export default function IndexPage({ data, pageContext: { font } }) {
 
         <Team team={teamData} style={{ marginBottom: '2em' }} />
       </Container>
+
       <MLHTrustBadge color="black" year="2020" region="eu" />
     </Layout>
   )

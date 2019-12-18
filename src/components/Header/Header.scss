@@ -4,20 +4,12 @@
   transition: 0.14s ease all;
   background: rgba($background, 1);
   color: white;
-
 }
 
 .header-expand {
   padding-top: 3em !important;
   padding-bottom: 2em !important;
   background: rgba($background, 0);
-  margin-right: 15%;
-  margin-left: 15%;
-}
-
-.shadow-sm .container {
-  margin-left: 15%;
-  margin-right: 15%;
 }
 
 .header-navbar {
@@ -32,5 +24,18 @@
 
   * {
     margin-right: 0.4rem;
+  }
+}
+
+.clear-badge {
+  @media only screen and (max-width: 1500px) {
+    .navbar-nav {
+      margin-right: 80px;
+    }
+  }
+  @media only screen and (max-width: 1400px) {
+    .navbar-nav {
+      margin-right: 140px;
+    }
   }
 }

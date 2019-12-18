@@ -3,40 +3,6 @@ import { Jumbotron, Container, Card, Row, Col } from 'reactstrap'
 
 import { DiagonalSplit } from '..'
 
-const sponsorTiers = {
-  platinum: {
-    name: 'Platinum',
-    color: '#CCC2C2',
-    order: 1,
-    companies: [],
-  },
-  gold: {
-    name: 'Gold',
-    color: '#C98910',
-    order: 2,
-    companies: [],
-  },
-  silver: {
-    name: 'Silver',
-    color: '#A8A8A8',
-    order: 3,
-    companies: [],
-  },
-  bronze: {
-    name: 'Bronze',
-    color: '#965A38',
-    order: 4,
-    companies: [],
-  },
-  partner: {
-    name: 'Partner',
-    color: '#323232',
-    order: 5,
-    companies: [],
-    height: '250px',
-  },
-}
-
 const ComingSoon = () => (
   <p className="mt-4 mb-4" style={{ textAlign: 'center', opacity: 0.6 }}>
     coming soon{' '}
@@ -71,7 +37,39 @@ const Tier = ({ tier }) => (
 
 export const Sponsors = ({ sponsors }) => {
   /* Build up the tier list */
-  let tierList = { ...sponsorTiers }
+  const tierList = {
+    platinum: {
+      name: 'Platinum',
+      color: '#CCC2C2',
+      order: 1,
+      companies: [],
+    },
+    gold: {
+      name: 'Gold',
+      color: '#C98910',
+      order: 2,
+      companies: [],
+    },
+    silver: {
+      name: 'Silver',
+      color: '#A8A8A8',
+      order: 3,
+      companies: [],
+    },
+    bronze: {
+      name: 'Bronze',
+      color: '#965A38',
+      order: 4,
+      companies: [],
+    },
+    partner: {
+      name: 'Partner',
+      color: '#323232',
+      order: 5,
+      companies: [],
+      height: '250px',
+    },
+  }
   sponsors.map(company => {
     const { name, url, logo, tier } = company
     tierList[tier].companies.push({ name, url, logo })

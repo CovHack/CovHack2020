@@ -120,6 +120,14 @@ export default function IndexPage({ data, pageContext: { font } }) {
 
       <Container style={{ marginTop: '3em', marginBottom: '3em' }}>
         <h2 style={{ marginTop: '1.5rem' }}>
+          <Emoji value={'🎫'} /> Tickets
+        </h2>
+
+        <tito-widget event="covhack/covhack2020"></tito-widget>
+      </Container>
+
+      <Container style={{ marginTop: '3em', marginBottom: '3em' }}>
+        <h2 style={{ marginTop: '1.5rem' }}>
           <Emoji value={'💬'} /> FAQ
         </h2>
 

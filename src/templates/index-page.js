@@ -64,8 +64,7 @@ export default function IndexPage({ data, pageContext: { font } }) {
       <div className="cta-container">
         <Card className="cta shadow bg-dark" style={{ textAlign: 'center' }}>
           <CardBody>
-            {/* TODO: to /register */}
-            <Button primary internal to="/" className="button" badge="Coming soon">
+            <Button primary to="https://ti.to/covhack/covhack2020" className="button">
               Get Tickets
             </Button>
 

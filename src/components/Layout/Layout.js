@@ -17,13 +17,17 @@ export const Layout = ({ children, titleOverride, clearBadge }) => {
         <html lang="en" />
         <title>{displayTitle}</title>
         <meta name="description" content={description} />
+        <meta name="twitter:description" content={description} />
+        <meta name="og:description" content={description} />
 
         <meta name="theme-color" content="#2800ee" />
 
         <meta property="og:type" content="business.business" />
         <meta property="og:title" content={title} />
         <meta property="og:url" content="/" />
-        <meta property="og:image" content="/img/og-image.jpg" />
+        <meta property="og:image" content="/social-media-card.jpg" />
+        <meta property="twitter:card" content="/social-media-card.jpg" />
+        <meta property="twitter:image" content="/social-media-card.jpg" />
 
         <script src="https://js.tito.io/v1" async></script>
 

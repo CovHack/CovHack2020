@@ -2,8 +2,10 @@ module.exports = {
   siteMetadata: {
     title: 'CovHack2020',
     description: `CovHackSoc's Second Annual Hackathon`,
+    url: 'https://covhack.org/',
   },
   plugins: [
+    'gatsby-plugin-react-helmet',
     'gatsby-plugin-netlify-cms',
     'gatsby-plugin-sass',
     'gatsby-transformer-sharp',

@@ -4,6 +4,7 @@ module.exports = {
     description: `CovHackSoc's Second Annual Hackathon`,
   },
   plugins: [
+    'gatsby-plugin-react-helmet',
     'gatsby-plugin-netlify-cms',
     'gatsby-plugin-sass',
     'gatsby-transformer-sharp',

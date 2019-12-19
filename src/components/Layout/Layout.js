@@ -8,7 +8,7 @@ import '../../scss/styles.scss'
 import './Layout.scss'
 
 export const Layout = ({ children, titleOverride, clearBadge }) => {
-  const { title, description } = useSiteMetadata()
+  const { title, description, url } = useSiteMetadata()
   const displayTitle = titleOverride || title
 
   return (
@@ -17,15 +17,15 @@ export const Layout = ({ children, titleOverride, clearBadge }) => {
         <html lang="en" />
         <title>{displayTitle}</title>
         <meta name="description" content={description} />
-        <meta name="og:description" content={description} />
+        <meta property="og:description" content={description} />
 
         <meta name="theme-color" content="#2800ee" />
 
         <meta property="og:type" content="business.business" />
         <meta property="og:title" content={title} />
-        <meta property="og:url" content="/" />
-        <meta property="og:image" content="/social-media-card.jpg" />
-        <meta property="twitter:card" content="/social-media-card.jpg" />
+        <meta property="og:url" content={url} />
+        <meta property="og:image" content={`${url}/social-media-card.jpg`} />
+        <meta property="twitter:card" content="summary_large_image" />
 
         <script src="https://js.tito.io/v1" async></script>
 

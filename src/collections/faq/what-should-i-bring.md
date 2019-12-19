@@ -13,4 +13,4 @@ We highly recommend you bring the following:
 * A change of clothes
 
 
-You can also find suggestions on [hack.athon.uk](https://hack.athon.uk/attending/bring/)
+You can also find suggestions on [hack.athon.uk](https://hack.athon.uk/attend/bring/)

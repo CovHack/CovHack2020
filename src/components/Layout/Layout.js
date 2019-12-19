@@ -24,7 +24,7 @@ export const Layout = ({ children, titleOverride, clearBadge }) => {
         <meta property="og:type" content="business.business" />
         <meta property="og:title" content={title} />
         <meta property="og:url" content={url} />
-        <meta property="og:image" content={`${url}/social-media-card.jpg`} />
+        <meta property="og:image" content={`${url}/social-media-card-2.jpg`} />
         <meta property="twitter:card" content="summary_large_image" />
 
         <script src="https://js.tito.io/v1" async></script>

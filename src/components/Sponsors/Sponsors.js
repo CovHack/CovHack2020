@@ -1,7 +1,9 @@
-import React, { Component } from 'react'
-import { Jumbotron, Container, Card, Row, Col } from 'reactstrap'
+import React from 'react'
+import { Jumbotron, Container, Row, Col } from 'reactstrap'
 
 import { DiagonalSplit } from '..'
+
+import './Sponsors.scss'
 
 const ComingSoon = () => (
   <p className="mt-4 mb-4" style={{ textAlign: 'center', opacity: 0.6 }}>
@@ -13,83 +15,78 @@ const ComingSoon = () => (
 )
 
 const Tier = ({ tier }) => (
-  <div key={tier.name}>
-    <h2 className="mt-5" style={{ color: tier.color, textAlign: 'center' }}>
-      {tier.name.toUpperCase()}
-    </h2>
-    <Row className="justify-content-md-center">
-      {tier.companies && tier.companies.length ? (
-        tier.companies.map(sponsor => (
-          <Col xs="6" sm="4">
-            <a href={sponsor.url}>
-              <img src={sponsor.logo} alt={sponsor.name} height={tier.height || '500px'} />
-            </a>
-          </Col>
-        ))
-      ) : (
-        <Col>
-          <ComingSoon />
+  <div key={tier.name} className="mt-5 mb-5">
+    {tier.name && (
+      <h3 className="mt-2 tier-name" style={{ color: tier.color }}>
+        {tier.name}
+      </h3>
+    )}
+
+    <Row className="justify-content-md-center" style={{ justifyContent: 'center' }}>
+      {tier.companiesList.map(sponsor => (
+        <Col sm={tier.colUnits || 6} className="sponsor-col">
+          <a href={sponsor.url}>
+            <img src={sponsor.logo} alt={sponsor.name} height={tier.height || '100px'} />
+          </a>
         </Col>
-      )}
+      ))}
     </Row>
   </div>
 )
 
 export const Sponsors = ({ sponsors }) => {
-  /* Build up the tier list */
   const tierList = {
-    platinum: {
-      name: 'Platinum',
-      color: '#CCC2C2',
-      order: 1,
-      companies: [],
+    headline: {
+      colUnits: 12,
+      height: '220px',
+      companiesList: [],
     },
-    gold: {
-      name: 'Gold',
-      color: '#C98910',
-      order: 2,
-      companies: [],
+    featured: {
+      colUnits: 6,
+      height: '160px',
+      companiesList: [],
     },
-    silver: {
-      name: 'Silver',
-      color: '#A8A8A8',
-      order: 3,
-      companies: [],
-    },
-    bronze: {
-      name: 'Bronze',
-      color: '#965A38',
-      order: 4,
-      companies: [],
+    starter: {
+      colUnits: 4,
+      height: '120px',
+      companiesList: [],
     },
     partner: {
-      name: 'Partner',
-      color: '#323232',
-      order: 5,
-      companies: [],
-      height: '250px',
+      colUnits: 3,
+      height: '80px',
+      name: 'Partners',
+      companiesList: [],
     },
   }
-  sponsors.map(company => {
-    const { name, url, logo, tier } = company
-    tierList[tier].companies.push({ name, url, logo })
-  })
-  const sponsorData = Object.values(tierList).sort((a, b) => a.order - b.order)
+
+  const tieredSponsors = sponsors.reduce((acc, sponsor) => {
+    const { name, url, logo, tier } = sponsor
+    acc[tier].companiesList.push({ name, url, logo })
+    return acc
+  }, tierList)
+
+  const noMainSponsors = !sponsors.reduce((acc, s) => (acc + (s.tier === 'partner') ? 0 : 1), 0)
+
   return (
     <Jumbotron style={{ padding: 0 }}>
       <DiagonalSplit invert />
+
       <Container className="jumbotron-padding" style={{ paddingTop: '4em', paddingBottom: '2em' }}>
         <h1 style={{ textAlign: 'center' }}>Sponsors</h1>
 
-        {sponsorData.map(tier => (
-          <div>{tier.companies.length > 0 && <Tier tier={tier} />}</div>
-        ))}
+        {noMainSponsors && <ComingSoon />}
+
+        {sponsors.length &&
+          Object.values(tieredSponsors).map(tier =>
+            tier.companiesList.length > 0 ? <Tier tier={tier} /> : null
+          )}
 
         <p className="mt-4 mb-4" style={{ textAlign: 'center' }}>
           Interested in sponsoring? Email us at{' '}
           <a href="mailto:hello@covhack.org">hello@covhack.org</a>!
         </p>
       </Container>
+
       <DiagonalSplit />
     </Jumbotron>
   )

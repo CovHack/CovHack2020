@@ -36,8 +36,7 @@
     "react-helmet": "^5.2.1",
     "react-icons": "^3.7.0",
     "reactstrap": "^8.0.1",
-    "styled-components": "^4.4.0",
-    "yarn": "^1.21.1"
+    "styled-components": "^4.4.0"
   },
   "devDependencies": {
     "eslint": "^6.6.0",

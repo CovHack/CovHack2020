@@ -4,13 +4,6 @@ title: Sunday
 listOrder: 2
 ---
 
-<style>
-    table{
-      width:100%;
-    }
-</style>
-
-
 | Time  | Activity                    |
 |-------|-----------------------------|
 | 7:00  | Breakfast                   |

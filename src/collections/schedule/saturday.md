@@ -4,12 +4,6 @@ title: Saturday
 listOrder: 1
 ---
 
-<style>
-    table{
-      width:100%;
-    }
-</style>
-
 | Time  | Activity              |
 |-------|-----------------------|
 | 10:00 | Doors Open            |

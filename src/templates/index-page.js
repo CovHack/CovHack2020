@@ -9,6 +9,7 @@ import {
   Map,
   Sponsors,
   Layout,
+  Schedule,
   HowToFindUs,
   FAQ,
   Team,
@@ -17,13 +18,16 @@ import {
 } from '../components'
 
 export default function IndexPage({ data, pageContext: { font } }) {
-  const { markdownRemark, howToFindUs, faq, team, file, sponsor } = data
+  const { markdownRemark, schedule, howToFindUs, faq, team, file, sponsor } = data
   const { frontmatter, html } = markdownRemark
 
   useEffect(() => {
     if (font) document.body.style.fontFamily = font
   })
 
+  const scheduleData = schedule.edges
+    .map(e => ({ ...e.node, ...e.node.frontmatter }))
+    .filter(e => e.type === 'schedule')
   const faqData = faq.edges
     .map(e => ({ ...e.node, ...e.node.frontmatter }))
     .filter(e => e.type === 'faq')
@@ -113,6 +117,15 @@ export default function IndexPage({ data, pageContext: { font } }) {
 
       <Container style={{ marginTop: '3em', marginBottom: '3em' }}>
         <h2 style={{ marginTop: '1.5rem' }}>
+          <Emoji value={'🕒'} /> Schedule
+        </h2>
+        <p>This is subject to change, but our planned schedule is as follows:</p>
+
+        <Schedule schedule={scheduleData} style={{ marginBottom: '2em' }} />
+      </Container>
+
+      <Container style={{ marginTop: '3em', marginBottom: '3em' }}>
+        <h2 style={{ marginTop: '1.5rem' }}>
           <Emoji value={'📍'} /> How To Find Us
         </h2>
 
@@ -166,6 +179,20 @@ export const pageQuery = graphql`
             title
             listOrder
             type
+          }
+        }
+      }
+    }
+
+    schedule: allMarkdownRemark(filter: { frontmatter: { type: { eq: "schedule" } } }) {
+      edges {
+        node {
+          id
+          html
+          frontmatter {
+            title
+            type
+            listOrder
           }
         }
       }

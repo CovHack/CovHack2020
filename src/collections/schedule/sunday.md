@@ -6,6 +6,7 @@ listOrder: 2
 
 | Time  | Activity                    |
 |-------|-----------------------------|
+| 0:00  | 🍕 Pizza!                   |
 | 7:00  | Breakfast                   |
 | 12:00 | Hacking Ends                |
 | 13:00 | Lunch                       |

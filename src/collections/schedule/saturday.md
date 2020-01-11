@@ -12,6 +12,4 @@ listOrder: 1
 | 13:00 | Lunch                 |
 | 14:00 | Workshops Start       |
 | 19:00 | Dinner                |
-| 20:00 | Code in the Dark      |
-| 21:00 | Code Golf             |
 | 22:00 | Werewolf              |

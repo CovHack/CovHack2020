@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './schedule.scss'
+import './Schedule.scss'
 import { Row, Col, Card, CardBody, CardTitle, CardText } from 'reactstrap'
 
 export const Schedule = props => (

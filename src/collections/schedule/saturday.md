@@ -12,4 +12,4 @@ listOrder: 1
 | 13:00 | Lunch                 |
 | 14:00 | Workshops Start       |
 | 19:00 | Dinner                |
-| 22:00 | Werewolf              |
+| 22:00 | [Werewolf](https://en.wikipedia.org/wiki/Werewolf_(social_deduction_game))              |

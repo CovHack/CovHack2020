@@ -38,17 +38,17 @@ export const Sponsors = ({ sponsors }) => {
   const tierList = {
     headline: {
       colUnits: 12,
-      height: '220px',
+      height: '240px',
       companiesList: [],
     },
     featured: {
       colUnits: 6,
-      height: '160px',
+      height: '200px',
       companiesList: [],
     },
-    sponsor: {
+    starter: {
       colUnits: 4,
-      height: '140px',
+      height: '160px',
       companiesList: [],
     },
     partner: {

@@ -2,6 +2,6 @@
 name: CoreLogic
 url: https://www.corelogicsolutions.co.uk/
 logo: /sponsors/cl.svg
-tier: sponsor
+tier: starter
 type: sponsor
 ---

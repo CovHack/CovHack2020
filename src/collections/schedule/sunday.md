@@ -8,7 +8,7 @@ listOrder: 2
 |-------|-----------------------------|
 | 7:00  | Breakfast                   |
 | 12:00 | Hacking Ends                |
-| 13:00 | Lunch                       |
+| 12:15 | Lunch                       |
 | 14:00 | Presentations               |
 | 16:00 | Judging                     |
 | 16:30 | Awards and Closing Ceremony |

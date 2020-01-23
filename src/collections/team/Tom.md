@@ -3,8 +3,8 @@ type: team
 name: Tom
 role: Inclusion Officer
 socials:
-    twitter: hackt0m
-    devpost: ThomasAtkinson
+    twitter: hacked_tom
+    github: hack-tom
 listOrder: 4
 ---
 

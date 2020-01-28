@@ -7,7 +7,7 @@ import './Sponsors.scss'
 
 const ComingSoon = () => (
   <p className="mt-4 mb-4" style={{ textAlign: 'center', opacity: 0.6 }}>
-    coming soon{' '}
+    more coming soon{' '}
     <span aria-label="sparkles" role="img">
       ✨
     </span>
@@ -38,17 +38,17 @@ export const Sponsors = ({ sponsors }) => {
   const tierList = {
     headline: {
       colUnits: 12,
-      height: '220px',
+      height: '240px',
       companiesList: [],
     },
     featured: {
       colUnits: 6,
-      height: '160px',
+      height: '200px',
       companiesList: [],
     },
     starter: {
       colUnits: 4,
-      height: '120px',
+      height: '160px',
       companiesList: [],
     },
     partner: {

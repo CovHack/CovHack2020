@@ -65,7 +65,7 @@ export const Sponsors = ({ sponsors }) => {
     return acc
   }, tierList)
 
-  const noMainSponsors = !sponsors.reduce((acc, s) => (acc + (s.tier === 'partner') ? 0 : 1), 0)
+  const noMainSponsors = !sponsors.reduce((acc, s) => acc + (s.tier === 'partner' ? 0 : 1), 0)
 
   return (
     <Jumbotron style={{ padding: 0 }}>

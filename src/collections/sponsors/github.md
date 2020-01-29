@@ -1,7 +1,7 @@
 ---
 name: GitHub
 url: https://github.com/
-logo: /sponsors/github-logo.svg
+logo: /raimbow-sprimkles/github-logo.svg
 tier: partner
 type: sponsor
 ---

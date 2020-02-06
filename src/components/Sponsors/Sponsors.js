@@ -15,7 +15,7 @@ const ComingSoon = () => (
 )
 
 const Tier = ({ tier }) => (
-  <div key={tier.name} className="mt-5 mb-5">
+  <div key={tier.name} className="mt-2 mb-5">
     {tier.name && (
       <h3 className="mt-2 tier-name" style={{ color: tier.color }}>
         {tier.name}
@@ -52,7 +52,7 @@ export const Sponsors = ({ sponsors }) => {
       companiesList: [],
     },
     partner: {
-      colUnits: 3,
+      colUnits: 2,
       height: '80px',
       name: 'Partners',
       companiesList: [],

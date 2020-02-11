@@ -41,8 +41,6 @@ export default function IndexPage({ data, pageContext: { font } }) {
     .map(e => ({ ...e.node, ...e.node.frontmatter }))
     .filter(e => e.type === 'sponsor')
 
-  console.log('sponsorData', sponsorData)
-
   const backgroundImage = file.childImageSharp.fluid
 
   const findOutMore = () => document.getElementById('findoutmore').scrollIntoView(true)

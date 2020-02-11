@@ -14,29 +14,30 @@ const ComingSoon = () => (
   </p>
 )
 
-const Tier = ({ tier }) => (
-  <div key={tier.name} className="mt-2 mb-5">
-    {tier.name && (
-      <h3 className="mt-2 tier-name" style={{ color: tier.color }}>
-        {tier.name}
-      </h3>
-    )}
+const Tier = ({ tier }) =>
+  console.log('sponsors', tier.companiesList) || (
+    <div key={tier.name} className="mt-2 mb-5">
+      {tier.name && (
+        <h3 className="mt-2 tier-name" style={{ color: tier.color }}>
+          {tier.name}
+        </h3>
+      )}
 
-    <Row className="justify-content-md-center" style={{ justifyContent: 'center' }}>
-      {tier.companiesList.map(sponsor => (
-        <Col sm={tier.colUnits || 6} className="sponsor-col">
-          <a href={sponsor.url}>
-            <img
-              src={sponsor.logo}
-              alt={sponsor.name}
-              height={sponsor.heightOverride || tier.height || '100px'}
-            />
-          </a>
-        </Col>
-      ))}
-    </Row>
-  </div>
-)
+      <Row className="justify-content-md-center" style={{ justifyContent: 'center' }}>
+        {tier.companiesList.map(sponsor => (
+          <Col sm={tier.colUnits || 6} className="sponsor-col">
+            <a href={sponsor.url}>
+              <img
+                src={sponsor.logo}
+                alt={sponsor.name}
+                height={sponsor.heightOverride || tier.height || '100px'}
+              />
+            </a>
+          </Col>
+        ))}
+      </Row>
+    </div>
+  )
 
 export const Sponsors = ({ sponsors }) => {
   const tierList = {
@@ -64,8 +65,7 @@ export const Sponsors = ({ sponsors }) => {
   }
 
   const tieredSponsors = sponsors.reduce((acc, sponsor) => {
-    const { name, url, logo, tier } = sponsor
-    acc[tier].companiesList.push({ name, url, logo })
+    acc[sponsor.tier].companiesList.push({ ...sponsor })
     return acc
   }, tierList)
 

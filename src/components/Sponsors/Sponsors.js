@@ -26,7 +26,11 @@ const Tier = ({ tier }) => (
       {tier.companiesList.map(sponsor => (
         <Col sm={tier.colUnits || 6} className="sponsor-col">
           <a href={sponsor.url}>
-            <img src={sponsor.logo} alt={sponsor.name} height={tier.height || '100px'} />
+            <img
+              src={sponsor.logo}
+              alt={sponsor.name}
+              height={sponsor.heightOverride || tier.height || '100px'}
+            />
           </a>
         </Col>
       ))}
@@ -48,11 +52,11 @@ export const Sponsors = ({ sponsors }) => {
     },
     starter: {
       colUnits: 4,
-      height: '160px',
+      height: '180px',
       companiesList: [],
     },
     partner: {
-      colUnits: 2,
+      colUnits: 3,
       height: '80px',
       name: 'Partners',
       companiesList: [],

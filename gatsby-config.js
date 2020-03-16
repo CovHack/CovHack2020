@@ -5,12 +5,18 @@ module.exports = {
     url: 'https://covhack.org',
   },
   plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
+    },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-netlify-cms',
     'gatsby-plugin-sass',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
-    'gatsby-theme-gallery',
     {
       resolve: `gatsby-source-filesystem`,
       options: {

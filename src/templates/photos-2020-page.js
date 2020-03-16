@@ -2,13 +2,18 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { Container } from 'reactstrap'
 import BackgroundImage from 'gatsby-background-image'
-import { Gallery } from 'gatsby-theme-gallery'
+import Gallery from '@browniebroke/gatsby-image-gallery'
 
 import { DiagonalSplit, Layout } from '../components'
+
+import '@browniebroke/gatsby-image-gallery/dist/style.css'
 
 export default function Photos2020Page({ data }) {
   const { markdownRemark, file } = data
   const { html, frontmatter } = markdownRemark
+
+  const fullSize = data.images.edges.map(edge => edge.node.full.fluid.src)
+  const thumbs = data.images.edges.map(edge => edge.node.thumb.fluid)
 
   const backgroundImage = file.childImageSharp.fluid
 
@@ -37,7 +42,7 @@ export default function Photos2020Page({ data }) {
       <DiagonalSplit color="black" />
       <div className="gallery-outer">
         <div class="gallery-inner">
-          <Gallery />
+          <Gallery images={fullSize} thumbs={thumbs} />
         </div>
         <DiagonalSplit />
       </div>
@@ -59,6 +64,24 @@ export const pageQuery = graphql`
       childImageSharp {
         fluid(quality: 80, maxWidth: 1920) {
           ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+
+    images: allFile(filter: { relativeDirectory: { eq: "photos-2020" } }, sort: { fields: name }) {
+      edges {
+        node {
+          id
+          thumb: childImageSharp {
+            fluid(maxWidth: 270, maxHeight: 270) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+          full: childImageSharp {
+            fluid(maxWidth: 5120, quality: 85, srcSetBreakpoints: [576, 768, 992, 1200]) {
+              ...GatsbyImageSharpFluid
+            }
+          }
         }
       }
     }

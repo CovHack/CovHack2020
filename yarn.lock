@@ -8127,10 +8127,10 @@ jimp@^0.6.4:
     core-js "^2.5.7"
     regenerator-runtime "^0.13.3"
 
-jmsv-gatsby-image-gallery@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/jmsv-gatsby-image-gallery/-/jmsv-gatsby-image-gallery-0.0.1.tgz#9974939c390cedfe8813d566d18bd9e7c633d728"
-  integrity sha512-KuG0UyHWdFihToeQC4hVR3NR8VJ9nq0lYgb1s/hRzmQYIOd7kD6Oi2pi0gnpzHuiLtU8wTjL533ut31UWyqPdA==
+jmsv-gatsby-image-gallery@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/jmsv-gatsby-image-gallery/-/jmsv-gatsby-image-gallery-0.1.1.tgz#7cf86d2e53e364e18d41561067bf7e7a82236839"
+  integrity sha512-bTiq4AoAxB+XdM7YQUvpoJ1yfORoVamN+cysqd+kWAE4elIWU51tp89Uhq0RCQ+f3F0ry9G2athELZAEBLnqvg==
   dependencies:
     react-image-lightbox "5.1.1"
     styled-components "^4.4.0"

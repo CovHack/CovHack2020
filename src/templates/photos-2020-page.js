@@ -42,7 +42,15 @@ export default function Photos2020Page({ data }) {
       <DiagonalSplit color="black" />
       <div className="gallery-outer">
         <div class="gallery-inner">
-          <Gallery images={fullSize} thumbs={thumbs} />
+          <Gallery
+            images={fullSize}
+            thumbs={thumbs}
+            colWidth={100 / 3}
+            mdColWidth={100 / 4}
+            lgColWidth={100 / 6}
+            gutter={'0.5rem'}
+            imgClass={''}
+          />
         </div>
         <DiagonalSplit />
       </div>

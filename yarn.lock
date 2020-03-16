@@ -791,14 +791,6 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@browniebroke/gatsby-image-gallery@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@browniebroke/gatsby-image-gallery/-/gatsby-image-gallery-3.0.0.tgz#4a606d15706ca110a9a3836ca2798d1dfae9d4ee"
-  integrity sha512-XHjTXRtOSFJiBmhM2XEc6HRBP6PIiX3JBBlAos9gkrxHjVFsaDwMDY1kYOgE8CP+CtSgwDuu7ylZCDCwTKEDsw==
-  dependencies:
-    react-image-lightbox "5.1.1"
-    styled-components "^4.4.0"
-
 "@emotion/babel-utils@^0.6.4":
   version "0.6.10"
   resolved "https://registry.yarnpkg.com/@emotion/babel-utils/-/babel-utils-0.6.10.tgz#83dbf3dfa933fae9fc566e54fbb45f14674c6ccc"
@@ -8134,6 +8126,14 @@ jimp@^0.6.4:
     "@jimp/types" "^0.6.8"
     core-js "^2.5.7"
     regenerator-runtime "^0.13.3"
+
+jmsv-gatsby-image-gallery@^0.0.0:
+  version "0.0.0"
+  resolved "https://registry.yarnpkg.com/jmsv-gatsby-image-gallery/-/jmsv-gatsby-image-gallery-0.0.0.tgz#6ae3d07b5d258285266183bb86ee96c24bbd2c50"
+  integrity sha512-6NO5G2d10xlNoROQe9k5KqHQMNL/vUqPIZGSo8ic8LUH0CTFkNSGXkmoZzpckJp5lZGy7BQIRpH++39Cp3mrog==
+  dependencies:
+    react-image-lightbox "5.1.1"
+    styled-components "^4.4.0"
 
 jpeg-js@^0.3.4:
   version "0.3.6"

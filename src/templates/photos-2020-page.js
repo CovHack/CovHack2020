@@ -78,7 +78,7 @@ export const pageQuery = graphql`
             }
           }
           full: childImageSharp {
-            fluid(maxWidth: 5120, quality: 85, srcSetBreakpoints: [576, 768, 992, 1200]) {
+            fluid(maxWidth: 5120, quality: 90, srcSetBreakpoints: [576, 768, 992, 1200]) {
               ...GatsbyImageSharpFluid
             }
           }

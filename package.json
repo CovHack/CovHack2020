@@ -14,7 +14,6 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "dependencies": {
-    "@browniebroke/gatsby-image-gallery": "^3.0.0",
     "aos": "^2.3.4",
     "bootstrap": "^4.3.1",
     "countdown": "^2.6.0",
@@ -30,6 +29,7 @@
     "gatsby-source-filesystem": "^2.1.28",
     "gatsby-transformer-remark": "^2.6.26",
     "gatsby-transformer-sharp": "^2.3.5",
+    "jmsv-gatsby-image-gallery": "^0.0.0",
     "netlify-cms": "^2.9.7",
     "node-sass": "^4.12.0",
     "react": "^16.9.0",

@@ -2,11 +2,11 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { Container } from 'reactstrap'
 import BackgroundImage from 'gatsby-background-image'
-import Gallery from '@browniebroke/gatsby-image-gallery'
+import Gallery from 'jmsv-gatsby-image-gallery'
 
 import { DiagonalSplit, Layout } from '../components'
 
-import '@browniebroke/gatsby-image-gallery/dist/style.css'
+import 'jmsv-gatsby-image-gallery/dist/style.css'
 
 export default function Photos2020Page({ data }) {
   const { markdownRemark, file } = data

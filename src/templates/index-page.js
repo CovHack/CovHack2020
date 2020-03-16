@@ -68,12 +68,12 @@ export default function IndexPage({ data, pageContext: { font } }) {
       <div className="cta-container">
         <Card className="cta shadow bg-dark" style={{ textAlign: 'center' }}>
           <CardBody>
-            <Button primary to="https://ti.to/covhack/covhack2020" className="button">
-              Get Tickets
+            <Button primary to="/2020-photos" className="button">
+              CovHack2020 Photos
             </Button>
 
-            <Button onClick={findOutMore} className="button">
-              Find Out More <MdKeyboardArrowDown className="brand-color" />
+            <Button to="https://youtube.com/" className="button">
+              Videos
             </Button>
           </CardBody>
         </Card>

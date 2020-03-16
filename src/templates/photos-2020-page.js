@@ -81,12 +81,12 @@ export const pageQuery = graphql`
         node {
           id
           thumb: childImageSharp {
-            fluid(maxWidth: 270, maxHeight: 270) {
+            fluid(maxWidth: 360, maxHeight: 360, quality: 80) {
               ...GatsbyImageSharpFluid
             }
           }
           full: childImageSharp {
-            fluid(maxWidth: 5120, quality: 90, srcSetBreakpoints: [576, 768, 992, 1200]) {
+            fluid(maxWidth: 3072, quality: 90, srcSetBreakpoints: [576, 992, 1200]) {
               ...GatsbyImageSharpFluid
             }
           }

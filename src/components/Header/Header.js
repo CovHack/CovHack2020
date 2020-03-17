@@ -49,11 +49,9 @@ export const Header = ({ clearBadge }) => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto header-navbar" navbar>
             <NavItemLink to="/">Home</NavItemLink>
-            <NavItemLink to="/hacktoberfest-2019" external>
-              Hacktoberfest
-            </NavItemLink>
+            <NavItemLink to="/2020-photos">Photos</NavItemLink>
             <NavItemLink to="http://2019.covhack.org" external>
-              CovHack 2019
+              CovHack2019
             </NavItemLink>
           </Nav>
         </Collapse>

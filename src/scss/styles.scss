@@ -106,3 +106,11 @@ table {
     padding: 0.3rem 0.6rem;
   }
 }
+
+.gallery-outer {
+  background: linear-gradient(180deg, black, #222);
+
+  .gallery-inner {
+    padding: 4rem 2rem;
+  }
+}

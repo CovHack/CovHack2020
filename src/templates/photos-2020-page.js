@@ -9,13 +9,13 @@ import { DiagonalSplit, Layout } from '../components'
 import 'jmsv-gatsby-image-gallery/dist/style.css'
 
 export default function Photos2020Page({ data }) {
-  const { markdownRemark, file } = data
+  const { markdownRemark, file, images } = data
   const { html, frontmatter } = markdownRemark
 
-  const fullSize = data.images.edges.map(edge => edge.node.full.fluid.src)
-  const thumbs = data.images.edges.map(edge => edge.node.thumb.fluid)
-
   const backgroundImage = file.childImageSharp.fluid
+
+  const fullSize = images.edges.map(({ node }) => node.full.fluid.src)
+  const thumbs = images.edges.map(({ node }) => node.thumb.fluid)
 
   return (
     <Layout>
@@ -49,7 +49,6 @@ export default function Photos2020Page({ data }) {
             mdColWidth={100 / 4}
             lgColWidth={100 / 6}
             gutter={'0.5rem'}
-            imgClass={''}
           />
         </div>
         <DiagonalSplit />

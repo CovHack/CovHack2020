@@ -43,8 +43,6 @@ export default function IndexPage({ data, pageContext: { font } }) {
 
   const backgroundImage = file.childImageSharp.fluid
 
-  const findOutMore = () => document.getElementById('findoutmore').scrollIntoView(true)
-
   const Emoji = ({ value }) => (
     <span role="img" aria-label="emoji">
       {value}

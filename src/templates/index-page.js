@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import { graphql } from 'gatsby'
 import { Container, Card, CardBody, Row, Col } from 'reactstrap'
-import { MdKeyboardArrowDown } from 'react-icons/md'
 import BackgroundImage from 'gatsby-background-image'
 
 import {
@@ -105,11 +104,11 @@ export default function IndexPage({ data, pageContext: { font } }) {
           </Col>
         </Row>
 
-        <h2 style={{ marginTop: '1.5rem' }}>
+        {/* <h2 style={{ marginTop: '1.5rem' }}>
           <Emoji value={'🎫'} /> Tickets
         </h2>
 
-        <tito-widget event="covhack/covhack2020"></tito-widget>
+        <tito-widget event="covhack/covhack2020"></tito-widget> */}
       </Container>
 
       <Sponsors sponsors={sponsorData} className="mb-10" />

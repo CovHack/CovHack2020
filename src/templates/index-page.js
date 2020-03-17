@@ -70,9 +70,10 @@ export default function IndexPage({ data, pageContext: { font } }) {
               CovHack2020 Photos
             </Button>
 
-            <Button to="https://youtube.com/" className="button">
+            {/* Should link to videos on YouTube when released */}
+            {/* <Button to="https://youtube.com/" className="button">
               Videos
-            </Button>
+            </Button> */}
           </CardBody>
         </Card>
       </div>

@@ -25,11 +25,31 @@ export default function Photos2020Page({ data }) {
             <div className="jumbo-inner">
               <h1 className="tagline">{frontmatter.tagline}</h1>
             </div>
+            <div style={{ marginBottom: '4em' }}>&nbsp;</div>
           </Container>
 
           <DiagonalSplit />
         </div>
       </BackgroundImage>
+
+      <Container style={{ marginTop: '-10em' }}>
+        <div
+          className="embed-responsive embed-responsive-16by9 shadow"
+          style={{ borderRadius: '0.5em', background: 'white' }}>
+          <iframe
+            className="embed-responsive-item"
+            src="https://www.youtube.com/embed/uTGAT9T5irs"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </Container>
+
+      <div className="bg-primary-translucent" style={{ marginTop: '-8em', marginBottom: '6em' }}>
+        <DiagonalSplit invert />
+        <div style={{ marginBottom: '2em' }}>&nbsp;</div>
+        <DiagonalSplit />
+      </div>
 
       <Container style={{ marginTop: '3em', marginBottom: '3em' }}>
         <div

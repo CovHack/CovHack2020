@@ -11,6 +11,10 @@ html {
   scroll-behavior: smooth;
 }
 
+.bg-primary-translucent {
+  background: $color-primary-translucent;
+}
+
 .jumbo-outer {
   margin-bottom: 2em;
   background-size: cover;

@@ -32,7 +32,7 @@ export default function Photos2020Page({ data }) {
         </div>
       </BackgroundImage>
 
-      <Container style={{ marginTop: '-10em' }}>
+      <Container style={{ marginTop: '-12em' }}>
         <div
           className="embed-responsive embed-responsive-16by9 shadow"
           style={{ borderRadius: '0.5em', background: 'white' }}>

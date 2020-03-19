@@ -20,9 +20,14 @@ export const Footer = () => (
 
       <div>
         <div>
-          <FaTwitter /> <a href="https://twitter.com/covhack">@covhack</a>
+          <FaTwitter />{' '}
+          <a href="https://twitter.com/covhack" target="_blank" rel="noopener noreferrer">
+            @covhack
+          </a>
           {' / '}
-          <a href="https://twitter.com/covhacksoc">@covhacksoc</a>
+          <a href="https://twitter.com/covhacksoc" target="_blank" rel="noopener noreferrer">
+            @covhacksoc
+          </a>
           {' / '}
           <MdEmail /> <a href="mailto:hello@covhack.org">hello@covhack.org</a>
         </div>

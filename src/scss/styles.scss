@@ -97,6 +97,27 @@ html {
   }
 }
 
+.video-divider {
+  margin-top: -10em;
+  margin-bottom: 6em;
+
+  @media (max-width: 767px) {
+    display: none;
+  }
+
+  @media (max-width: 1649px) {
+    margin-top: -8rem;
+  }
+
+  @media (max-width: 1199px) {
+    margin-top: -7rem;
+  }
+
+  @media (max-width: 991px) {
+    margin-top: -6rem;
+  }
+}
+
 img {
   max-width: 100%;
 }

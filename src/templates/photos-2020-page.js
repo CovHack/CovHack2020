@@ -45,7 +45,7 @@ export default function Photos2020Page({ data }) {
         </div>
       </Container>
 
-      <div className="bg-primary-translucent" style={{ marginTop: '-8em', marginBottom: '6em' }}>
+      <div className="video-divider bg-primary-translucent">
         <DiagonalSplit invert />
         <div style={{ marginBottom: '2em' }}>&nbsp;</div>
         <DiagonalSplit />

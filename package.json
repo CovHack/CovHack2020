@@ -5,10 +5,10 @@
   "version": "0.1.0",
   "license": "ISC",
   "scripts": {
-    "build": "gatsby build",
+    "start": "gatsby develop",
     "develop": "gatsby develop",
+    "build": "gatsby build",
     "format": "prettier --write *.js src/**/*.{js,jsx,scss}",
-    "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "rm -rf public .cache",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""

@@ -15,6 +15,10 @@ html {
   background: $color-primary-translucent;
 }
 
+.gatsby-image-wrapper {
+  background-color: $background;
+}
+
 .jumbo-outer {
   margin-bottom: 2em;
   background-size: cover;

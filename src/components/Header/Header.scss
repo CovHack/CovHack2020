@@ -4,6 +4,7 @@
   transition: 0.14s ease all;
   background: rgba($background, 1);
   color: white;
+  z-index: 900 !important;
 }
 
 .header-expand {

@@ -27,7 +27,7 @@ export const Header = ({ clearBadge }) => {
   const updateExpand = () => setExpand(window.scrollY < 60)
 
   useEffect(() => {
-    updateExpand
+    updateExpand()
     window.addEventListener('scroll', updateExpand)
   })
 

@@ -50,9 +50,6 @@ export const Header = ({ clearBadge }) => {
           <Nav className="ml-auto header-navbar" navbar>
             <NavItemLink to="/">Home</NavItemLink>
             <NavItemLink to="/2020-photos">Photos</NavItemLink>
-            <NavItemLink to="http://2019.covhack.org" external>
-              CovHack2019
-            </NavItemLink>
           </Nav>
         </Collapse>
       </Container>

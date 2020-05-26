@@ -66,6 +66,7 @@ module.exports = {
         name: 'pages',
       },
     },
+    'gatsby-plugin-catch-links',
     'gatsby-transformer-remark',
     {
       resolve: `gatsby-plugin-google-analytics`,

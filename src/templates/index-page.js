@@ -90,7 +90,7 @@ export default function IndexPage({ data, pageContext: { font } }) {
               <div style={{ padding: '1.5em' }} className="key-points">
                 <ul>
                   <li>
-                    <Emoji value={'📅'} /> 15-16th February 2020
+                    <Emoji value={'📅'} /> 15-21st February 2021
                   </li>
                   <li>
                     <Emoji value={'🎓'} /> Open to all students
@@ -128,13 +128,12 @@ export default function IndexPage({ data, pageContext: { font } }) {
         </h2>
 
         <p>
-          CovHack is being held at the Engineering, Environment, and Computing building (known as
-          the EEC) at the Coventry University Campus.
+          CovHack is being hosted online by students at Coventry University.
         </p>
 
         <HowToFindUs howToFindUs={howToFindUsData} style={{ marginBottom: '2em' }} />
 
-        <Map />
+      <Map />
       </Container>
 
       <Container style={{ marginTop: '3em', marginBottom: '3em' }}>

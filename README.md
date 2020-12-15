@@ -6,8 +6,8 @@ CovHack2020 Site, built with [GatsbyJS](https://www.gatsbyjs.org)
 
 ### Prerequisites
 
-- Node (e.g. v12)
-- git
+- [Node](https://nodejs.org/en/download/) (e.g. v12)
+- [git](https://git-scm.com/downloads)
 
 ### Steps
 

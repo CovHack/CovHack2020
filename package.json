@@ -28,7 +28,7 @@
     "gatsby-plugin-sharp": "^2.4.13",
     "gatsby-plugin-social-cards": "^0.5.7",
     "gatsby-source-filesystem": "^2.1.56",
-    "gatsby-transformer-remark": "^2.6.59",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^2.3.19",
     "jmsv-gatsby-image-gallery": "*",
     "netlify-cms-app": "^2.11.29",

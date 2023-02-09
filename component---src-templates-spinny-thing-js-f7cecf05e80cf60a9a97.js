@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[12],{"59p8":function(n,e,t){},IKOi:function(n,e,t){"use strict";t.r(e);var a=t("q1tI"),c=t.n(a);t("59p8");e.default=function(){return c.a.createElement("div",{className:"spinny-thing"},c.a.createElement("a",{href:"http://www.covhack.org"},"CovHack2020"))}}}]);
+//# sourceMappingURL=component---src-templates-spinny-thing-js-f7cecf05e80cf60a9a97.js.map

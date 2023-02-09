@@ -1,0 +1,11 @@
+/*!
+  Copyright (c) 2017 Jed Watson.
+  Licensed under the MIT License (MIT), see
+  http://jedwatson.github.io/classnames
+*/
+
+/**
+ * @license countdown.js v2.6.0 http://countdownjs.org
+ * Copyright (c)2006-2014 Stephen M. McKamey.
+ * Licensed under The MIT License.
+ */
